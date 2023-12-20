@@ -20,6 +20,10 @@ public class MyApp {
 	public static install_req ins=new install_req();
     public static ArrayList<User> arrayUser=new ArrayList<User>();
     public static ArrayList<Form> installForm=new ArrayList<Form>();
+    private static final String msgPB="Please enter the number to add to purchase bag";
+    private static final String msgAdd="we add to the bag successfully!";
+    private static final String msgAdmn="s12028923@stu.najah.edu";
+    private static final String msgInvalid= "please enter valid input";
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public static ArrayList<Product> arrayProduct=new ArrayList<Product>();
     public static String ar0[]= {"p1","Interior","descr1","imgpath1","10$","yes"};
@@ -43,7 +47,7 @@ public class MyApp {
     
     
     //do not change the order 
-    static User u1=new User("s12028923@stu.najah.edu","Samah Qaradeh","19-11-2002","123abc","0594426881");
+    static User u1=new User(msgAdmn,"Samah Qaradeh","19-11-2002","123abc","0594426881");
     static User u2=new User("shorooqsousa@gmail.com","Shoroq123","9-11-2003","123sh","0591038227");
     static User u3=new User("s12029069@stu.najah.edu","Shorooooq45","20-10-2007","123456","0594440337");
     public static String email;
@@ -127,12 +131,12 @@ public class MyApp {
   								if(ce==1) {
   									
   									while(true) {
-  									System.out.println("Please enter the number to add to purchase bag");
+  									System.out.println(msgPB);
   									int a=input.nextInt();
   									if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct) ) {
   										arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   									
-  										System.out.println("we add to the bag successfully!");
+  										System.out.println(msgAdd);
   										break;
   									}
   									
@@ -164,12 +168,12 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										System.out.println("Please enter the number to add to purchase bag");
+  										System.out.println(msgPB);
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItInterior(arrayProduct.get(a).getName(), arrayProduct)  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											System.out.println("we add to the bag successfully!");
+  											System.out.println(msgAdd);
   											break;
   										}
   										
@@ -204,12 +208,12 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										System.out.println("Please enter the number to add to purchase bag");
+  										System.out.println(msgPB);
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItExterior(arrayProduct.get(a).getName(), arrayProduct)  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											System.out.println("we add to the bag successfully!");
+  											System.out.println(msgAdd);
   											break;
   										}
   										
@@ -247,12 +251,12 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										System.out.println("Please enter the number to add to purchase bag");
+  										System.out.println(msgPB);
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItElectronics(arrayProduct.get(a).getName(), arrayProduct)  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											System.out.println("we add to the bag successfully!");
+  											System.out.println(msgAdd);
   											break;
   										}
   										
@@ -288,12 +292,12 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										System.out.println("Please enter the number to add to purchase bag");
+  										System.out.println(msgPB);
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  pr.isItAvailable(arrayProduct.get(a).getName(), arrayProduct) ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											System.out.println("we add to the bag successfully!");
+  											System.out.println(msgAdd);
   											break;
   										}
   										
@@ -337,7 +341,7 @@ public class MyApp {
   										
   										
   										
-  										System.out.println("we add to the bag successfully!");
+  										System.out.println(msgAdd);
   										break;
   										
   									}
@@ -647,7 +651,7 @@ public class MyApp {
   									break;	
   									}
   									else {
-  										System.out.println("please enter valid input");
+  										System.out.println(msgInvalid);
   									}
   									}
   								}
@@ -669,7 +673,7 @@ public class MyApp {
   								System.out.println("enter index you want to delete");
   								int g;
   								g=input.nextInt();
-  								if((g<0)||g>arrayProduct.size())System.out.println("please enter valid input");
+  								if((g<0)||g>arrayProduct.size())System.out.println(msgInvalid);
   								else {
   									arrayProduct.remove(g);
   									System.out.println("done successfully");
@@ -710,7 +714,7 @@ public class MyApp {
   							
   						}
   						else {
-  							System.out.println("please enter valid input");
+  							System.out.println(msgInvalid);
   							
   						}
   						
@@ -747,7 +751,7 @@ public class MyApp {
   										break;
   									}
   									else {
-  										System.out.println("please enter valid input");
+  										System.out.println(msgInvalid);
   									}
   								}
   								
@@ -775,7 +779,7 @@ public class MyApp {
   						break;
   					}
   					else {
-  						System.out.println("please enter valid input");
+  						System.out.println(msgInvalid);
   					}
   					
   					}
@@ -977,7 +981,7 @@ public class MyApp {
 					break;
 				}
 				else {
-					System.out.println("please enter valid input");
+					System.out.println(msgInvalid);
 				}
 				}
 			}
@@ -992,7 +996,7 @@ public class MyApp {
 					break;
 				}
 				else {
-					System.out.println("please enter valid input");
+					System.out.println(msgInvalid);
 				}
 				}
 				
@@ -1005,7 +1009,7 @@ public class MyApp {
             	break;
             }
             else {
-            	System.out.println("Please enter valid input");
+            	System.out.println(msgInvalid);
             }
 			
 			
@@ -1021,7 +1025,7 @@ public class MyApp {
 
 		n=true;
 		
-	    final String username = "s12028923@stu.najah.edu";
+	    final String username = msgAdmn;
         final String password = "qcxb ceer pebu fkgn";
 
         Properties props = new Properties();
@@ -1038,7 +1042,7 @@ public class MyApp {
 
         try {
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("s12028923@stu.najah.edu"));
+            message.setFrom(new InternetAddress(msgAdmn));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(arrayUser.get(userNumber).getEmail()));
             message.setSubject("confirmation");
             
