@@ -20,6 +20,8 @@ public class Product_CatalogTest {
 		public Product_CatalogTest(MyApp o) {
 			super();
 			this.obj15=o;
+		
+			
 			
 		}
 	

@@ -91,6 +91,18 @@ public class install_req {
 	}
 
 	
+	public static String myDate(String number) {  
+		char s1=number.charAt(0);
+		char s2=number.charAt(1);
+		
+		int d=s1-'0';
+		int h=s2-'0';
+		return menuDays[d]+" "+menuhours[h];
+		
+		
+		
+	}
+
 	public static void printInstallmenu() {
 		
 		
@@ -120,18 +132,6 @@ public class install_req {
 	        }
 		
 		 
-	}
-	
-	public static String myDate(String number) {  
-		char s1=number.charAt(0);
-		char s2=number.charAt(1);
-		
-		int d=s1-'0';
-		int h=s2-'0';
-		return menuDays[d]+" "+menuhours[h];
-		
-		
-		
 	}
 	
 	

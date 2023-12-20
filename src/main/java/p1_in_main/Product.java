@@ -33,23 +33,6 @@ public class Product {
 		
 		
 	}
-
-	@Override
-	public String toString() {
-		String a;
-		a=name+"\t"+category+"\t"+this.description+"\t"+this.price+"\t"+this.image+"\t"+this.availability;
-		return a;
-	}
-    
-	public Product(String ar[]) {
-		super();
-		this.name = ar[0];
-		this.category = ar[1];
-		this.description =ar[2];
-		this.image = ar[3];
-		this.price = ar[4];
-		this.availability = ar[5];
-	}
 	public void printMenueInnerSearch() {
 		System.out.println("******************************");
 		System.out.println("1- add to my purchase bag");
@@ -76,6 +59,24 @@ public class Product {
 		
 		
 		
+	}
+	
+
+	@Override
+	public String toString() {
+		String a;
+		a=name+"\t"+category+"\t"+this.description+"\t"+this.price+"\t"+this.image+"\t"+this.availability;
+		return a;
+	}
+    
+	public Product(String ar[]) {
+		super();
+		this.name = ar[0];
+		this.category = ar[1];
+		this.description =ar[2];
+		this.image = ar[3];
+		this.price = ar[4];
+		this.availability = ar[5];
 	}
 	
 	

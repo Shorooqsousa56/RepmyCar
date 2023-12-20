@@ -1,22 +1,24 @@
 package p1_in_main;
 
+
 public class Admin {
 	
+	private static final String A="**************************";
 	
 	public void printMenu() {
-		System.out.println("***************");
+		System.out.println(A);
 		System.out.println("1-product");
 		System.out.println("2-customer");
 		System.out.println("3-installer");
 		System.out.println("4-logout");
 		
 	
-		System.out.println("***************");
+		System.out.println(A);
 			
 		
 	}
 	public void printMenuProduct() {
-		System.out.println("***************");
+		System.out.println(A);
 		System.out.println("1-view product");
 		System.out.println("2-edit product");
 		System.out.println("3-delete product");
@@ -24,7 +26,7 @@ public class Admin {
 		System.out.println("5-go back");
 		
 	
-		System.out.println("***************");
+		System.out.println(A);
 		
 		
 		
@@ -34,20 +36,20 @@ public class Admin {
 	
 	
 	public void printMenuCustomer() {
-		System.out.println("***************");
+		System.out.println(A);
 		System.out.println("1-view customer");
 		System.out.println("2-delete customer");
 		System.out.println("3-go back");
 		
 		
 	
-		System.out.println("***************");
+		System.out.println(A);
 		
 	}
 	
 	
 	public void printMenuInst() {
-		System.out.println("************************");
+		System.out.println(A);
 		System.out.println("1-view installation req");
 		System.out.println("2-make time free");
 		System.out.println("3-make time reserved");
@@ -57,13 +59,13 @@ public class Admin {
 		
 		
 	
-		System.out.println("************************");
+		System.out.println(A);
 		
 		
 		
 	}
 	 public void editProductMenue() {
-		 System.out.println("*****************************");
+		 System.out.println(A);
 		 
 		 System.out.println("1- edit category ");
 		 System.out.println("2- edit description ");
@@ -71,7 +73,7 @@ public class Admin {
 		 System.out.println("4- edit price ");
 		 System.out.println("5- edit availability ");
 		// System.out.println("5- go back ");
-		 System.out.println("*****************************");
+		 System.out.println(A);
 		 
 		 
 		 
