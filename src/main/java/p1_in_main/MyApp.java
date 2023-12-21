@@ -2,6 +2,9 @@
 
 package p1_in_main;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.*;
@@ -20,8 +23,12 @@ public class MyApp {
                 return  record.getMessage();
             }
         });
+        try {
         logger.addHandler(consoleHandler);
         logger.setLevel(Level.ALL);
+        }catch(Exception e) {
+        	
+        }
         Logger rootLogger = Logger.getLogger("");
         Handler[] handlers = rootLogger.getHandlers();
         if (handlers[0] instanceof ConsoleHandler) {
@@ -853,8 +860,30 @@ public class MyApp {
   		
   	}
   	
-  	
-   
+
+     public static String hashPassword(String password) {
+         try {
+             // Create a MessageDigest instance for SHA-256
+             MessageDigest digest = MessageDigest.getInstance("SHA-256");
+
+             // Get the password bytes
+             byte[] passwordBytes = password.getBytes(StandardCharsets.UTF_8);
+
+             // Update the digest with the password bytes
+             byte[] hashedBytes = digest.digest(passwordBytes);
+
+             // Convert the hashed bytes to a hexadecimal representation
+             StringBuilder hexStringBuilder = new StringBuilder();
+             for (byte b : hashedBytes) {
+                 hexStringBuilder.append(String.format("%02x", b));
+             }
+
+             return hexStringBuilder.toString();
+         } catch (NoSuchAlgorithmException e) {
+             // Handle the exception (e.g., log it or throw a runtime exception)
+             throw new RuntimeException("Error hashing password", e);
+         }
+     }
  	
  	public static void printCustomerMenu() {
          int menuWidth = 30;
@@ -1038,7 +1067,7 @@ public class MyApp {
 		
 	    final String username = MSGADMN;
         final String password = "qcxb ceer pebu fkgn";
-
+       
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
