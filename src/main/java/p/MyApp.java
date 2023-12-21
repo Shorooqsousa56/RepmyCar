@@ -14,7 +14,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 public class MyApp {
-	private static final Logger logger = Logger.getLogger(MyApp.class.getName());
+	 static final Logger logger = Logger.getLogger(MyApp.class.getName());
     static {
         Handler consoleHandler = new ConsoleHandler();
         consoleHandler.setFormatter(new Formatter() {

@@ -25,19 +25,19 @@ public class Product {
 	
 	
 	void printMenuePurchse() {
-		System.out.println("*****************");
-		System.out.println("1 - delete ");
-		System.out.println("2- confirm my bag");
-		System.out.println("3- go back");
-		System.out.println("*****************");
+		MyApp.logger.info("*****************"+"\n");
+		MyApp.logger.info("1 - delete\n ");
+		MyApp.logger.info("2- confirm my bag\n");
+		MyApp.logger.info("3- go back\n");
+		MyApp.logger.info("*****************"+"\n");
 		
 		
 	}
 	public void printMenueInnerSearch() {
-		System.out.println("******************************");
-		System.out.println("1- add to my purchase bag");
-	    System.out.println("2- go back ");
-	    System.out.println("******************************");
+		MyApp.logger.info("******************************"+"\n");
+		MyApp.logger.info("1- add to my purchase bag\n");
+	    MyApp.logger.info("2- go back\n ");
+	    MyApp.logger.info("******************************"+"\n");
 		
 	}
 	
@@ -46,16 +46,16 @@ public class Product {
 	
     public void printMenueForSearchProducts() {
 		
-		System.out.println("**************************************************");
-		System.out.println("     choices for searching     ");
-		System.out.println("1- show everything (no search)");
-		System.out.println("2- search depends on Categories(Interior)");
-		System.out.println("3- search depends on Categories(Exterior)");
-		System.out.println("4- search depends on Categories(Electronics)");
-		System.out.println("5- search depends on availability");
-		System.out.println("6- search depends on name        ");
-		 System.out.println("7- go back to the big menu ");
-		System.out.println("**************************************************");
+		MyApp.logger.info("**************************************************"+"\n");
+		MyApp.logger.info("     choices for searching    \n ");
+		MyApp.logger.info("1- show everything (no search)\n");
+		MyApp.logger.info("2- search depends on Categories(Interior)\n");
+		MyApp.logger.info("3- search depends on Categories(Exterior)\n");
+		MyApp.logger.info("4- search depends on Categories(Electronics)\n");
+		MyApp.logger.info("5- search depends on availability\n");
+		MyApp.logger.info("6- search depends on name       \n ");
+		 MyApp.logger.info("7- go back to the big menu \n");
+		MyApp.logger.info("**************************************************"+"\n");
 		
 		
 		
@@ -81,7 +81,7 @@ public class Product {
 	
 	
     public void printTitle() {
-    	System.out.println("id\tname\tcategory\tdesc\tprice\timage\tavailab\n");
+    	MyApp.logger.info("id\tname\tcategory\tdesc\tprice\timage\tavailab\n\n");
     	
     }
 	

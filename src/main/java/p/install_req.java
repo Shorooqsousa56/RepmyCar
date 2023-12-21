@@ -108,26 +108,26 @@ boolean rwe=false;
 		
 		 
 		 int i=0;
-		System.out.print("\t");
+		MyApp.logger.info("\t");
 		 for(int j=0;j<6;j++) {
-			 System.out.print("\t"+menuhours[j]);
+			 MyApp.logger.info("\t"+menuhours[j]);
 		 }
 		 
-		 System.out.println();
+		 MyApp.logger.info("\n");
 		 
 		
 		 
 		 for (int r=0; r<6; r++) {
-			 System.out.print(menuDays[i++]+"\t");
+			 MyApp.logger.info(menuDays[i++]+"\t");
 	            for (int c=0; c<6; c++) {
 	            	
 	            	String s1 = Integer.toString(r); 
 	                String s2 =Integer.toString(c); 
 	            	
 	            	
-	                System.out.print(s1+s2+"-"+ values[r][c] + "\t"+"\t");
+	                MyApp.logger.info(s1+s2+"-"+ values[r][c] + "\t"+"\t");
 	            }
-	            System.out.println();
+	            MyApp.logger.info("\n");
 	           
 	        }
 		

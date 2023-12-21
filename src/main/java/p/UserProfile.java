@@ -6,13 +6,13 @@ public class UserProfile {
 	 
 	
 	 public void editUserProfileMenue() {
-		 System.out.println("*****************************");
-		 System.out.println("1- edit User Name ");
-		 System.out.println("2- edit Birthday ");
-		 System.out.println("3- edit Password ");
-		 System.out.println("4- edit phone number ");
-		 System.out.println("5- go back to the big menue ");
-		 System.out.println("*****************************");
+		 MyApp.logger.info("*****************************"+"\n");
+		 MyApp.logger.info("1- edit User Name \n");
+		 MyApp.logger.info("2- edit Birthday \n");
+		 MyApp.logger.info("3- edit Password \n");
+		 MyApp.logger.info("4- edit phone number\n ");
+		 MyApp.logger.info("5- go back to the big menue\n ");
+		 MyApp.logger.info("*****************************"+"\n");
 		 
 		 
 		 
