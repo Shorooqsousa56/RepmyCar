@@ -4,11 +4,30 @@ package p1_in_main;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.*;
+
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 public class MyApp {
+	private static final Logger logger = Logger.getLogger(MyApp.class.getName());
+    static {
+        Handler consoleHandler = new ConsoleHandler();
+        consoleHandler.setFormatter(new Formatter() {
+            @Override
+            public String format(LogRecord record) {
+                return  record.getMessage();
+            }
+        });
+        logger.addHandler(consoleHandler);
+        logger.setLevel(Level.ALL);
+        Logger rootLogger = Logger.getLogger("");
+        Handler[] handlers = rootLogger.getHandlers();
+        if (handlers[0] instanceof ConsoleHandler) {
+            rootLogger.removeHandler(handlers[0]);
+        }
+    }
 	public static UserProfile Up=new UserProfile();
 	public boolean t=true;
 	public static boolean n=false;
@@ -98,7 +117,7 @@ public class MyApp {
   				String s[]=logInForm();
   				isExist(s[0],s[1]);
   				if(isLogIn) {
-  					System.out.println("log in Succeded");
+  					logger.info("log in Succeded\n");
   					
   				if(r.isCustomer(s[0],s[1], arrayUser)) {
   					
@@ -113,7 +132,7 @@ public class MyApp {
   							if(z==1) {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									System.out.println(i+"\t"+arrayProduct.get(i));
+  									logger.info(i+"\t"+arrayProduct.get(i)+"\n");
   									
   								}
   								while(true) {
@@ -123,12 +142,12 @@ public class MyApp {
   								if(ce==1) {
   									
   									while(true) {
-  									System.out.println(MSGPB);
+  									logger.info(MSGPB+"\n");
   									int a=input.nextInt();
   									if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct) ) {
   										arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   									
-  										System.out.println(MSGADD);
+  										logger.info(MSGADD+"\n");
   										break;
   									}
   									
@@ -149,7 +168,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItInterior(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{System.out.println(i+"\t"+arrayProduct.get(i));}
+  									{logger.info(i+"\t"+arrayProduct.get(i)+"\n");}
   									
   								}
   								
@@ -160,12 +179,12 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										System.out.println(MSGPB);
+  										logger.info(MSGPB+"\n");
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItInterior(arrayProduct.get(a).getName(), arrayProduct)  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											System.out.println(MSGADD);
+  											logger.info(MSGADD+"\n");
   											break;
   										}
   										
@@ -189,7 +208,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItExterior(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{System.out.println(i+"\t"+arrayProduct.get(i));}
+  									{logger.info(i+"\t"+arrayProduct.get(i)+"\n");}
   									
   								}
   								
@@ -200,12 +219,12 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										System.out.println(MSGPB);
+  										logger.info(MSGPB+"\n");
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItExterior(arrayProduct.get(a).getName(), arrayProduct)  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											System.out.println(MSGADD);
+  											logger.info(MSGADD+"\n");
   											break;
   										}
   										
@@ -232,7 +251,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItElectronics(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{System.out.println(i+"\t"+arrayProduct.get(i));}
+  									{logger.info(i+"\t"+arrayProduct.get(i)+"\n");}
   									
   								}
   								
@@ -243,12 +262,12 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										System.out.println(MSGPB);
+  										logger.info(MSGPB+"\n");
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItElectronics(arrayProduct.get(a).getName(), arrayProduct)  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											System.out.println(MSGADD);
+  											logger.info(MSGADD+"\n");
   											break;
   										}
   										
@@ -273,7 +292,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItAvailable(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{System.out.println(i+"\t"+arrayProduct.get(i));}
+  									{logger.info(i+"\t"+arrayProduct.get(i)+"\n");}
   									
   								}
   								
@@ -284,12 +303,12 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										System.out.println(MSGPB);
+  										logger.info(MSGPB+"\n");
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  pr.isItAvailable(arrayProduct.get(a).getName(), arrayProduct) ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											System.out.println(MSGADD);
+  											logger.info(MSGADD+"\n");
   											break;
   										}
   										
@@ -313,7 +332,7 @@ public class MyApp {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									System.out.println(i+"\t"+arrayProduct.get(i));
+  									logger.info(i+"\t"+arrayProduct.get(i)+"\n");
   									
   								}
   								while(true) {
@@ -323,7 +342,7 @@ public class MyApp {
   								if(ce==1) {
   									
   									while(true) {
-  									System.out.println("Please enter the product name to add to purchase bag");
+  									logger.info("Please enter the product name to add to purchase bag\n");
   									String a=input.next();
   									
   									if(pr.isTheProductExist(a, arrayProduct)&&pr.isItAvailable(a,arrayProduct))
@@ -333,7 +352,7 @@ public class MyApp {
   										
   										
   										
-  										System.out.println(MSGADD);
+  										logger.info(MSGADD+"\n");
   										break;
   										
   									}
@@ -379,18 +398,18 @@ public class MyApp {
   						
   						pr.printTitle();
   						for(int i=0; i<arrayUser.get(userNumber).purchaseBag.size();i++) {
-  							System.out.print(i+"\t");
-  					    System.out.println(arrayUser.get(userNumber).purchaseBag.get(i));
+  							logger.info(i+"\t");
+  					    logger.info(arrayUser.get(userNumber).purchaseBag.get(i)+"\n");
   						}
   						}
-  						else System.out.println("empty burchasebag !");
+  						else logger.info("empty burchasebag !\n");
   						while(arrayUser.get(userNumber).purchaseBag.size()>0) {
   							if(flag1)break;
   							pr.printMenuePurchse();
   							int a=input.nextInt();
   							if(a==1) {
   								while (true) {
-  								System.out.println("please enter number you want to delete");
+  								logger.info("please enter number you want to delete\n");
   								int qw=input.nextInt();
   								if(qw>=0 &&  qw< arrayUser.get(userNumber).purchaseBag.size()) {
   									
@@ -403,7 +422,7 @@ public class MyApp {
   								}
   							}
   							else if (a==2) {
-  								System.out.println("Done succesfully");
+  								logger.info("Done succesfully\n");
   								
   								
   								ArrayList<Product>pu=  (ArrayList)arrayUser.get(userNumber).purchaseBag.clone();
@@ -429,7 +448,7 @@ public class MyApp {
   								break;
   							}
   							else {
-  								System.out.println("please enter valid number");
+  								logger.info("please enter valid number\n");
   							}
   							
   							
@@ -440,13 +459,13 @@ public class MyApp {
   					else if(fi==3) {
   						
   						for(int i=0;i<arrayUser.get(userNumber).history.size(); i++) {
-  							System.out.println("***********This is order #"+i+"***********");
+  							logger.info("***********This is order #"+i+"***********\n");
   							pr.printTitle();
   							
   							for(int m=0;m<arrayUser.get(userNumber).history.get(i).size(); m++) {
-  								System.out.print(m+"\t");
-  								System.out.println(
-  						arrayUser.get(userNumber).history.get(i).get(m)
+  								logger.info(m+"\t");
+  								logger.info(
+  						arrayUser.get(userNumber).history.get(i).get(m)+"\n"
   										
   										);
   								
@@ -462,28 +481,28 @@ public class MyApp {
                       	boolean flag=false;
                       	while(true) {
                       	install_req.printInstallmenu();
-                      	System.out.println("Enter B to Return Back.");
+                      	logger.info("Enter B to Return Back.\n");
                       	String A=input.next();
                           if(A.equals("B")) {break;}
                            while(true) {
                           	if( ins.is_the_input_available(A)) {
                           		
                           		if(!ins.is_Free(A)) {
-                          			System.out.println("This Date is Reserved Please Choose Another Date!.");
+                          			logger.info("This Date is Reserved Please Choose Another Date!.\n");
                           			break;
                           		}
                           		else {
                           			 Form F=new Form();
                           		    F.setUserName(arrayUser.get(userNumber).getUserName());
                           		 
-                          			System.out.println("Reserved Done Succesfully!.");
+                          			logger.info("Reserved Done Succesfully!.\n");
                           			ins.make_Reserve(A);
-                          			System.out.println("Please Enter Car Model:");
+                          			logger.info("Please Enter Car Model:\n");
                           			String A2=input.next();
                           			F.setCarModel(A2);
-                          			System.out.println("Please Enter Product Name:");
+                          			logger.info("Please Enter Product Name:\n");
                           			A2=input.next();
-                          			System.out.println(" Done Succesfully!.");
+                          			logger.info(" Done Succesfully!.\n");
                           			F.setProduct(A2);
                           		    F.setDate(install_req.myDate(A));
                           		    arrayUser.get(userNumber).myForm.add(F);
@@ -505,7 +524,7 @@ public class MyApp {
                           		
                           	}
                           	else {
-                          		System.out.println("You Have Entered Invalid Input Please Try Again!.");
+                          		logger.info("You Have Entered Invalid Input Please Try Again!.\n");
                           		break;
                           	}
                           	
@@ -520,8 +539,8 @@ public class MyApp {
                       else if(fi==5) {
   						for(int i=0;i<arrayUser.get(userNumber).myForm.size();i++) {
   							
-  							System.out.println("Form "+i+":"+arrayUser.get(userNumber).myForm.get(i));
-  							System.out.println("****************************************************");
+  							logger.info("Form "+i+":"+arrayUser.get(userNumber).myForm.get(i)+"\n");
+  							logger.info("****************************************************\n");
   							
   							
   	
@@ -530,7 +549,7 @@ public class MyApp {
                       	
   					}
                       else if(fi==6) {
-  						System.out.println(arrayUser.get(userNumber));
+  						logger.info(arrayUser.get(userNumber)+"\n");
   					}
                       else if(fi==7) {
                       	while(true) {
@@ -539,13 +558,13 @@ public class MyApp {
                       		int as=input.nextInt();
                       		String sss;
                       		if(as==1) {
-                      			System.out.println("please enter your new user name");
+                      			logger.info("please enter your new user name\n");
                       			sss=input.next();
                       			Up.editUserName(sss, userNumber, arrayUser);
                       			break;
                       		}
                       		else if(as==2) {
-                      			System.out.println("please enter your new birthday");
+                      			logger.info("please enter your new birthday\n");
                       			sss=input.next();
                       			Up.editbday(sss, userNumber, arrayUser);
                       			break;
@@ -553,7 +572,7 @@ public class MyApp {
                       			
                       		}
                       		else if(as==3) {
-                      			System.out.println("please enter your new password");
+                      			logger.info("please enter your new password\n");
                       			sss=input.next();
                       			Up.editpwd(sss, userNumber, arrayUser);
                       			break;
@@ -561,7 +580,7 @@ public class MyApp {
                       		}
                       		else if(as==4) {
                       			
-                      			System.out.println("please enter your new phone number");
+                      			logger.info("please enter your new phone number\n");
                       			sss=input.next();
                       			Up.editphone(sss, userNumber, arrayUser);
                       			break;
@@ -582,7 +601,7 @@ public class MyApp {
   						break;
   					}
                       else {
-                      System.out.println("You have entered invalid number, please try again")	;
+                      logger.info("You have entered invalid number, please try again\n")	;
                       }
   					
   					
@@ -607,8 +626,8 @@ public class MyApp {
   						if(q==1) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
-  								System.out.print(i+"\t");
-  								System.out.println(arrayProduct.get(i));
+  								logger.info(i+"\t");
+  								logger.info(arrayProduct.get(i)+"\n");
   							}
   							
   							
@@ -616,12 +635,12 @@ public class MyApp {
   						else if(q==2) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
-  								System.out.print(i+"\t");
-  								System.out.println(arrayProduct.get(i));}
+  								logger.info(i+"\t");
+  								logger.info(arrayProduct.get(i)+"\n");}
   							boolean f=false;
   							while(true) {
   								if(f)break;
-  								System.out.println("select id you want to edit");
+  								logger.info("select id you want to edit\n");
   								int c=input.nextInt();
   								if((c>-1 )&&  (c<arrayProduct.size())) {
   									myAdmin.editProductMenue();
@@ -631,7 +650,7 @@ public class MyApp {
   									f=true;
   									
   									
-  									System.out.println("Please enter the new value");
+  									logger.info("Please enter the new value\n");
   									String z=input.next();
   									if(y==1)arrayProduct.get(c).setCategory(z);
   									else if(y==2)arrayProduct.get(c).setDescription(z);
@@ -643,7 +662,7 @@ public class MyApp {
   									break;	
   									}
   									else {
-  										System.out.println(MSGINVALID);
+  										logger.info(MSGINVALID+"\n");
   									}
   									}
   								}
@@ -659,16 +678,16 @@ public class MyApp {
   						else if(q==3) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
-  								System.out.print(i+"\t");
-  								System.out.println(arrayProduct.get(i));}
+  								logger.info(i+"\t");
+  								logger.info(arrayProduct.get(i)+"\n");}
   							while(true) {
-  								System.out.println("enter index you want to delete");
+  								logger.info("enter index you want to delete\n");
   								int g;
   								g=input.nextInt();
-  								if((g<0)||g>arrayProduct.size())System.out.println(MSGINVALID);
+  								if((g<0)||g>arrayProduct.size())logger.info(MSGINVALID+"\n");
   								else {
   									arrayProduct.remove(g);
-  									System.out.println("done successfully");
+  									logger.info("done successfully\n");
   									
   									
   									break;
@@ -679,20 +698,20 @@ public class MyApp {
   						else if (q==4) {
   							
   							String ar[]=new String[6];
-  							System.out.println("Please enter name");
+  							logger.info("Please enter name\n");
   							ar[0]=input.next();
-  							System.out.println("Please enter category");
+  							logger.info("Please enter category\n");
   							ar[1]=input.next();
-  							System.out.println("Please enter description");
+  							logger.info("Please enter description\n");
   							ar[2]=input.next();
   							
-  							System.out.println("Please enter price");
+  							logger.info("Please enter price\n");
   							ar[4]=input.next();
   							 
-  							System.out.println("Please enter image");
+  							logger.info("Please enter image\n");
   							ar[3]=input.next();
   							
-  							System.out.println("Please enter availability");
+  							logger.info("Please enter availability\n");
   							ar[5]=input.next();
   							
   							Product qw=new Product(ar);
@@ -706,7 +725,7 @@ public class MyApp {
   							
   						}
   						else {
-  							System.out.println(MSGINVALID);
+  							logger.info(MSGINVALID+"\n");
   							
   						}
   						
@@ -723,16 +742,16 @@ public class MyApp {
   							int u=input.nextInt();
   							if(u==1) {
   								for(int i=2;i<arrayUser.size();i++) {
-  									System.out.print((i-2)+"- ");
-  									System.out.println(arrayUser.get(i));
+  									logger.info((i-2)+"- ");
+  									logger.info(arrayUser.get(i)+"\n");
   							
   							}
   								
   							}
   							else if(u==2) {
   								for(int i=2;i<arrayUser.size();i++) {
-  									System.out.print((i-2)+"- ");
-  									System.out.println(arrayUser.get(i));
+  									logger.info((i-2)+"- ");
+  									logger.info(arrayUser.get(i)+"\n");
   							
   							}
   								while(true) {
@@ -743,7 +762,7 @@ public class MyApp {
   										break;
   									}
   									else {
-  										System.out.println(MSGINVALID);
+  										logger.info(MSGINVALID+"\n");
   									}
   								}
   								
@@ -753,7 +772,7 @@ public class MyApp {
   								break;
   							}
   							else {
-  								System.out.println("please enter valid");
+  								logger.info("please enter valid\n");
   							}
   							
   						}
@@ -771,7 +790,7 @@ public class MyApp {
   						break;
   					}
   					else {
-  						System.out.println(MSGINVALID);
+  						logger.info(MSGINVALID+"\n");
   					}
   					
   					}
@@ -801,7 +820,7 @@ public class MyApp {
   				}
   				else {
   					
-  					System.out.println("You have enter invalid parameter ,please try again!");
+  					logger.info("You have enter invalid parameter ,please try again!\n");
   				}
   				
   				
@@ -813,16 +832,16 @@ public class MyApp {
   				if(isSignUp) {
   					User qw=new User(s[0],s[1],s[2],s[3],s[4]);
   					arrayUser.add(qw);
-  					System.out.println("Sign Up succeded!");
+  					logger.info("Sign Up succeded!\n");
   					
   				}else {
-  					System.out.println("Sign Up failed! please try again");
+  					logger.info("Sign Up failed! please try again\n");
   					
   				}
   				
   			}
   			else {
-  				System.out.println("You have entered invalid input, please try again!");
+  				logger.info("You have entered invalid input, please try again!\n");
   				
   				
   			}
@@ -855,22 +874,22 @@ public class MyApp {
 
         
          for (int i = 0; i < menuWidth + 2; i++) {
-             System.out.print("*");
+             logger.info("*");
          }
-         System.out.println();
+         logger.info("\n");
 
         
          
          for (String item : menuItems) {
-             System.out.println(" "+ item );
+             logger.info(" "+ item +"\n");
 
          }
 
         
          for (int i = 0; i < menuWidth + 2; i++) {
-             System.out.print("*");
+             logger.info("*");
          }
-         System.out.println();
+         logger.info("\n");
  }
  	
  	public static void printLogInSignUpMenue() {
@@ -884,34 +903,34 @@ public class MyApp {
 
         
          for (int i = 0; i < menuWidth + 2; i++) {
-             System.out.print("*");
+             logger.info("*");
          }
-         System.out.println();
+         logger.info("\n");
 
        
-         System.out.println(" " + menu);
+         logger.info(" " + menu+"\n");
          for (String item : menuItems) {
-             System.out.println(" "+ item );
+             logger.info(" "+ item+"\n" );
 
          }
 
         
          for (int i = 0; i < menuWidth + 2; i++) {
-             System.out.print("*");
+             logger.info("*");
          }
-         System.out.println();
+         logger.info("\n");
  }
  	
 
  	public static String[]logInForm(){
  		String s1,s2;
- 		System.out.print("Please enter your email:");
+ 		logger.info("Please enter your email:");
  		Scanner input=new Scanner(System.in);
  		s1=input.next();
- 		System.out.println();
- 		System.out.print("Please enter your password:");
+ 		logger.info("\n");
+ 		logger.info("Please enter your password:");
  		s2=input.next();
- 		System.out.println();
+ 		logger.info("\n");
  		String s[]= {s1,s2};
  		return s;
  		
@@ -919,26 +938,26 @@ public class MyApp {
 
  	public static String [] signUpForm() {
  		Scanner input = new Scanner(System.in);
- 		System.out.print("Please Enter Your Email:");
+ 		logger.info("Please Enter Your Email:");
  		String email = input.next();
- 		 System.out.println();
+ 		 logger.info("\n");
  			
  			
- 		System.out.print("Please Enter Your Name:");
+ 		logger.info("Please Enter Your Name:");
  		String name = input.next();
- 		 System.out.println();
+ 		 logger.info("\n");
  			
- 		System.out.print("Please Enter Your Birthdate:");
+ 		logger.info("Please Enter Your Birthdate:");
  		String bd = input.next();
- 		 System.out.println();
+ 		 logger.info("\n");
  			
- 		System.out.print("Please Enter Your Password:");
+ 		logger.info("Please Enter Your Password:");
  		String password = input.next();
- 		 System.out.println();
+ 		 logger.info("\n");
  			
- 		System.out.print("Please Enter Your PhoneNumber:");
+ 		logger.info("Please Enter Your PhoneNumber:");
  		String number = input.next();
- 		 System.out.println();
+ 		 logger.info("\n");
  		 
  		String information[]= {email,name,bd,password,number};
  	
@@ -956,7 +975,7 @@ public class MyApp {
 			int za=input.nextInt();
 			if(za==1) {
 		for(int i=0;i<installForm.size();i++) {
-			System.out.println(installForm.get(i));
+			logger.info(installForm.get(i)+"\n");
 			
 		}
 				
@@ -964,7 +983,7 @@ public class MyApp {
 			}
 			else if(za==2) {
 				install_req.printInstallmenu();
-				System.out.println("please enter symbol");
+				logger.info("please enter symbol"+"\n");
 				while(true) {
 				String u=input.next();
 				if(ins.is_the_input_available(u)) {
@@ -973,13 +992,13 @@ public class MyApp {
 					break;
 				}
 				else {
-					System.out.println(MSGINVALID);
+					logger.info(MSGINVALID+"\n");
 				}
 				}
 			}
             else if(za==3) {
             	install_req.printInstallmenu();
-				System.out.println("please enter symbol");
+				logger.info("please enter symbol\n");
 				while(true) {
 				String u=input.next();
 				if(ins.is_the_input_available(u)) {
@@ -988,7 +1007,7 @@ public class MyApp {
 					break;
 				}
 				else {
-					System.out.println(MSGINVALID);
+					logger.info(MSGINVALID+"\n");
 				}
 				}
 				
@@ -1001,7 +1020,7 @@ public class MyApp {
             	break;
             }
             else {
-            	System.out.println(MSGINVALID);
+            	logger.info(MSGINVALID+"\n");
             }
 			
 			
@@ -1044,7 +1063,7 @@ public class MyApp {
             Transport.send(message);
          
 
-            System.out.println("Email sent successfully!");
+            logger.info("Email sent successfully!\n");
 
         } catch (MessagingException e) {
             e.printStackTrace();
@@ -1172,6 +1191,5 @@ public class MyApp {
 	
 
 }
-
 
 

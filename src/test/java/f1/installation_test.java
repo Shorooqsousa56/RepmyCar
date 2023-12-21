@@ -86,7 +86,7 @@ public void trying_to_make_this_time_free() {
 public void the_time_becomes_free() {
     // Write code here that turns the phrase above into concrete actions
     //throw new io.cucumber.java.PendingException();
-	assertEquals(obj22.ins.values[0][1],'F');
+	assertEquals('F',obj22.ins.values[0][1]);
 }
 
 @When("trying to make this time reserved")
@@ -103,7 +103,7 @@ public void the_time_becomes_reserved() {
     // Write code here that turns the phrase above into concrete actions
    // throw new io.cucumber.java.PendingException();
 	
-	assertTrue(obj22.ins.values[0][1]=='R');
+	assertEquals('R',obj22.ins.values[0][1]);
 }
 
 	
