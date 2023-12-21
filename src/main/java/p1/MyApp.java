@@ -1,6 +1,6 @@
 
 
-package p1_in_main;
+package p1;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -35,7 +35,7 @@ public class MyApp {
             rootLogger.removeHandler(handlers[0]);
         }
     }
-	public static UserProfile Up=new UserProfile();
+	public static UserProfile up=new UserProfile();
 	public boolean t=true;
 	public static boolean n=false;
     public static Admin myAdmin =new Admin();
@@ -561,19 +561,19 @@ public class MyApp {
                       else if(fi==7) {
                       	while(true) {
                       		
-                      		Up.editUserProfileMenue();
+                      		up.editUserProfileMenue();
                       		int as=input.nextInt();
                       		String sss;
                       		if(as==1) {
                       			logger.info("please enter your new user name\n");
                       			sss=input.next();
-                      			Up.editUserName(sss, userNumber, arrayUser);
+                      			up.editUserName(sss, userNumber, arrayUser);
                       			break;
                       		}
                       		else if(as==2) {
                       			logger.info("please enter your new birthday\n");
                       			sss=input.next();
-                      			Up.editbday(sss, userNumber, arrayUser);
+                      			up.editbday(sss, userNumber, arrayUser);
                       			break;
                       			
                       			
@@ -581,7 +581,7 @@ public class MyApp {
                       		else if(as==3) {
                       			logger.info("please enter your new password\n");
                       			sss=input.next();
-                      			Up.editpwd(sss, userNumber, arrayUser);
+                      			up.editpwd(sss, userNumber, arrayUser);
                       			break;
                       			
                       		}
@@ -589,7 +589,7 @@ public class MyApp {
                       			
                       			logger.info("please enter your new phone number\n");
                       			sss=input.next();
-                      			Up.editphone(sss, userNumber, arrayUser);
+                      			up.editphone(sss, userNumber, arrayUser);
                       			break;
                       			
                       		}

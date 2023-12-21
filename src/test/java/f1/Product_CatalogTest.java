@@ -1,18 +1,18 @@
 package f1;
 
 import static org.junit.Assert.assertTrue;
-import static p1_in_main.MyApp.TheProductIsAvailable;
-import static p1_in_main.MyApp.TheProductIsElectronics;
-import static p1_in_main.MyApp.TheProductIsExist;
-import static p1_in_main.MyApp.TheProductIsExterior;
-import static p1_in_main.MyApp.TheProductIsInterior;
-import static p1_in_main.MyApp.arrayProduct;
-import static p1_in_main.MyApp.pr;
+import static p1.MyApp.TheProductIsAvailable;
+import static p1.MyApp.TheProductIsElectronics;
+import static p1.MyApp.TheProductIsExist;
+import static p1.MyApp.TheProductIsExterior;
+import static p1.MyApp.TheProductIsInterior;
+import static p1.MyApp.arrayProduct;
+import static p1.MyApp.pr;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import p1_in_main.MyApp;
+import p1.MyApp;
 
 public class Product_CatalogTest {
 	public MyApp obj15;

@@ -1,41 +1,41 @@
-package p1_in_main;
+package p1;
 
 public class Form {
 
-	String UserName;
-	String CarModel;
-	String Product;
-	String Date;
+	String userName;
+	String carModel;
+	String product;
+	String date;
 	
 	
 	@Override
 	public String toString() {
-		return "[UserName=" + UserName + ", CarModel=" + CarModel + ", Product=" + Product + ", Date=" + Date
+		return "[UserName=" + userName + ", CarModel=" + carModel + ", Product=" + product + ", Date=" + date
 				+ "]";
 	}
 	public String getUserName() {
-		return UserName;
+		return userName;
 	}
 	public void setUserName(String userName) {
-		UserName = userName;
+		this.userName = userName;
 	}
 	public String getCarModel() {
-		return CarModel;
+		return carModel;
 	}
 	public void setCarModel(String carModel) {
-		CarModel = carModel;
+		this.carModel = carModel;
 	}
 	public String getProduct() {
-		return Product;
+		return product;
 	}
 	public void setProduct(String product) {
-		Product = product;
+		this.product = product;
 	}
 	public String getDate() {
-		return Date;
+		return date;
 	}
 	public void setDate(String date) {
-		Date = date;
+		this.date = date;
 	}
 	
 	
