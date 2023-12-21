@@ -42,7 +42,7 @@ public class Auth {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
 		//assertTrue(true);
-		assertTrue(obj.isLogIn==false);
+		assertFalse(obj.isLogIn);
 		
 	}
 	//*/
@@ -63,7 +63,7 @@ public class Auth {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
 
-		assertTrue(obj.isLogIn==true);//=true;   obj.isLogIn
+		assertTrue(obj.isLogIn);//=true;   obj.isLogIn
 		
 	}
 
@@ -101,7 +101,7 @@ public class Auth {
 	public void sign_up_failed() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		assertTrue(obj.isSignUp==false);
+		assertFalse(obj.isSignUp);
 	}
 
 	@When("I enter my information , but ther is missing field")
@@ -138,7 +138,7 @@ public class Auth {
 	public void log_out_succeeded() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		assertTrue(obj.isLogIn==false);
+		assertFalse(obj.isLogIn);
 	}
 
 	

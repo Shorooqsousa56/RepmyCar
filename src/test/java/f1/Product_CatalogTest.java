@@ -47,7 +47,7 @@ public class Product_CatalogTest {
 	public void the_product_is_interior() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-	assertTrue(TheProductIsInterior==true);
+	assertTrue(TheProductIsInterior);
 	
 	}
 
@@ -69,7 +69,7 @@ public class Product_CatalogTest {
 	public void the_product_is_exterior() {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-	assertTrue(TheProductIsExterior==true);
+	assertTrue(TheProductIsExterior);
 	
 	}
 
@@ -94,7 +94,7 @@ public class Product_CatalogTest {
 	public void the_product_is_electronics() {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-	assertTrue(TheProductIsElectronics==true);
+	assertTrue(TheProductIsElectronics);
 	}
 
 	@Given("product is not available")
@@ -117,7 +117,7 @@ public class Product_CatalogTest {
 	public void the_product_is_available() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-	assertTrue(TheProductIsAvailable==true);
+	assertTrue(TheProductIsAvailable);
 	
 	}
 
@@ -139,7 +139,7 @@ public class Product_CatalogTest {
 	public void the_product_is_exist() {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-	assertTrue(TheProductIsExist==true);
+	assertTrue(TheProductIsExist);
 	}
 
 	

@@ -30,7 +30,7 @@ public void customer_have_order() {
 public void notification_send_to_customer_via_emial_to_confirm_order() {
     // Write code here that turns the phrase above into concrete actions
     //throw new io.cucumber.java.PendingException();
-	assertTrue(obj.n==true);
+	assertTrue(obj.n);
 }
 
 @When("customer make installation req")
@@ -45,14 +45,14 @@ public void customer_make_installation_req() {
 public void notification_send_to_customer_via_emial_to_confirm_install_req() {
     // Write code here that turns the phrase above into concrete actions
     //throw new io.cucumber.java.PendingException();
-    assertTrue(obj.n==true);
+    assertTrue(obj.n);
 }
 
 @Then("notification send to installer via emial to confirm install req")
 public void notification_send_to_installer_via_emial_to_confirm_install_req() {
     // Write code here that turns the phrase above into concrete actions
     //throw new io.cucumber.java.PendingException();
-    assertTrue(obj.n==true);
+    assertTrue(obj.n);
 }
 
 

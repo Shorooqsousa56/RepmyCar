@@ -1,5 +1,6 @@
 package f1;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static p1_in_main.MyApp.arrayUser;
 import static p1_in_main.MyApp.isLogIn;
@@ -39,7 +40,7 @@ public MyApp obj22;
 	public void invalid_log_in() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		assertTrue(isLogIn==false);
+		assertFalse(isLogIn);
 		//assertTrue(true);
 	}
 
@@ -47,7 +48,7 @@ public MyApp obj22;
 	public void valid_log_in() {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-		assertTrue(isLogIn==true);
+		assertTrue(isLogIn);
 	}
 
 	@When("i enter email: {string} and password :{string} inf for installer")

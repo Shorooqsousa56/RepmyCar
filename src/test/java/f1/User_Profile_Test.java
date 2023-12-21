@@ -34,7 +34,7 @@ public class User_Profile_Test {
 	    if(obj.arrayUser.get(2).getUserName().equals("yazan")) {
 	    	flag=true;
 	    }
-	    assertTrue(flag==true);
+	    assertTrue(flag);
 		
 	}
 
@@ -52,7 +52,7 @@ public class User_Profile_Test {
 	    if(obj.arrayUser.get(2).getBday().equals("2/2/2002")) {
 	    	flag=true;
 	    }
-	    assertTrue(flag==true);
+	    assertTrue(flag);
 		
 	}
 
@@ -70,7 +70,7 @@ public class User_Profile_Test {
 	    if(obj.arrayUser.get(2).getPwd().equals("123")) {
 	    	flag=true;
 	    }
-	    assertTrue(flag==true);
+	    assertTrue(flag);
 	}
 
 	@When("user try to edit phone")
@@ -86,7 +86,7 @@ public class User_Profile_Test {
 	    if(obj.arrayUser.get(2).getPhone().equals("059837367")) {
 	    	flag=true;
 	    }
-	    assertTrue(flag==true);
+	    assertTrue(flag);
 	}
 	
 	

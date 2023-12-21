@@ -1,5 +1,6 @@
 package f1;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -50,7 +51,7 @@ public class AdminTest {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
 		
-		assertTrue(  obj.arrayProduct.get(0).getPrice().equals("800")  );
+		assertEquals(  obj.arrayProduct.get(0).getPrice(),"800"  );
 	}
 
 	@When("admin try to delete product")
@@ -63,7 +64,7 @@ public class AdminTest {
 	@Then("the product is deleted")
 	public void the_product_is_deleted() {
 	   
-		assertTrue(true==MyApp.pr.isTheProductExist("p1",MyApp.arrayProduct));
+		assertTrue(MyApp.pr.isTheProductExist("p1",MyApp.arrayProduct));
 		
 		//assertTrue(true);
 	}

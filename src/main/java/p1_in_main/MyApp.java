@@ -461,7 +461,7 @@ public class MyApp {
                       else if(fi==4) {
                       	boolean flag=false;
                       	while(true) {
-                      	ins.printInstallmenu();
+                      	install_req.printInstallmenu();
                       	System.out.println("Enter B to Return Back.");
                       	String A=input.next();
                           if(A.equals("B")) {break;}
@@ -485,7 +485,7 @@ public class MyApp {
                           			A2=input.next();
                           			System.out.println(" Done Succesfully!.");
                           			F.setProduct(A2);
-                          		    F.setDate(ins.myDate(A));
+                          		    F.setDate(install_req.myDate(A));
                           		    arrayUser.get(userNumber).myForm.add(F);
                           		    installForm.add(F);
                           		    
@@ -963,7 +963,7 @@ public class MyApp {
 				
 			}
 			else if(za==2) {
-				ins.printInstallmenu();
+				install_req.printInstallmenu();
 				System.out.println("please enter symbol");
 				while(true) {
 				String u=input.next();
@@ -978,7 +978,7 @@ public class MyApp {
 				}
 			}
             else if(za==3) {
-            	ins.printInstallmenu();
+            	install_req.printInstallmenu();
 				System.out.println("please enter symbol");
 				while(true) {
 				String u=input.next();
@@ -994,7 +994,7 @@ public class MyApp {
 				
 			}
             else if(za==4) {
-            	ins.printInstallmenu();
+            	install_req.printInstallmenu();
             	
             }
             else if(za==5) {
@@ -1027,6 +1027,7 @@ public class MyApp {
         props.put("mail.smtp.port", "587");
 
         Session session = Session.getInstance(props, new Authenticator() {
+        	 @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, password);
             }
