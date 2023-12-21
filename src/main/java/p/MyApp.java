@@ -43,7 +43,7 @@ public class MyApp {
 	public static boolean isLogIn;
 	public static boolean isSignUp=false;
 	public static RoleMain r=new RoleMain();
-	public static install_req ins=new install_req();
+	public static InstallReq ins=new InstallReq();
     public static ArrayList<User> arrayUser=new ArrayList<User>();
     public static ArrayList<Form> installForm=new ArrayList<Form>();
     private static final String MSGPB="Please enter the number to add to purchase bag";
@@ -487,14 +487,14 @@ public class MyApp {
                       else if(fi==4) {
                       	boolean flag=false;
                       	while(true) {
-                      	install_req.printInstallmenu();
+                      	InstallReq.printInstallmenu();
                       	logger.info("Enter B to Return Back.\n");
                       	String aaazx=input.next();
                           if(aaazx.equals("B")) {break;}
                            while(true) {
-                          	if( ins.is_the_input_available(aaazx)) {
+                          	if( ins.istheinputavailable(aaazx)) {
                           		
-                          		if(!ins.is_Free(aaazx)) {
+                          		if(!ins.isFree(aaazx)) {
                           			logger.info("This Date is Reserved Please Choose Another Date!.\n");
                           			break;
                           		}
@@ -503,7 +503,7 @@ public class MyApp {
                           		    fffty.setUserName(arrayUser.get(userNumber).getUserName());
                           		 
                           			logger.info("Reserved Done Succesfully!.\n");
-                          			ins.make_Reserve(aaazx);
+                          			ins.makeReserve(aaazx);
                           			logger.info("Please Enter Car Model:\n");
                           			String aaanm=input.next();
                           			fffty.setCarModel(aaanm);
@@ -511,7 +511,7 @@ public class MyApp {
                           			aaanm=input.next();
                           			logger.info(" Done Succesfully!.\n");
                           			fffty.setProduct(aaanm);
-                          		    fffty.setDate(install_req.myDate(aaazx));
+                          		    fffty.setDate(InstallReq.myDate(aaazx));
                           		    arrayUser.get(userNumber).myForm.add(fffty);
                           		    installForm.add(fffty);
                           		    
@@ -1009,12 +1009,12 @@ public class MyApp {
 				
 			}
 			else if(za==2) {
-				install_req.printInstallmenu();
+				InstallReq.printInstallmenu();
 				logger.info("please enter symbol"+"\n");
 				while(true) {
 				String u=input.next();
-				if(ins.is_the_input_available(u)) {
-					ins.make_Free(u);
+				if(ins.istheinputavailable(u)) {
+					ins.makeFree(u);
 					
 					break;
 				}
@@ -1024,12 +1024,12 @@ public class MyApp {
 				}
 			}
             else if(za==3) {
-            	install_req.printInstallmenu();
+            	InstallReq.printInstallmenu();
 				logger.info("please enter symbol\n");
 				while(true) {
 				String u=input.next();
-				if(ins.is_the_input_available(u)) {
-					ins.make_Reserve(u);
+				if(ins.istheinputavailable(u)) {
+					ins.makeReserve(u);
 					
 					break;
 				}
@@ -1040,7 +1040,7 @@ public class MyApp {
 				
 			}
             else if(za==4) {
-            	install_req.printInstallmenu();
+            	InstallReq.printInstallmenu();
             	
             }
             else if(za==5) {

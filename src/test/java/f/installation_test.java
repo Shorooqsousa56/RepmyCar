@@ -27,7 +27,7 @@ public void customer_try_to_reserve_a_free_time() {
     // Write code here that turns the phrase above into concrete actions
   //  throw new io.cucumber.java.PendingException();
 	//isReserve=obj22.ins.is_Free("10");
-	isFree=obj22.ins.is_Free("10");
+	isFree=obj22.ins.isFree("10");
 	
 	
 }
@@ -44,7 +44,7 @@ public void the_time_was_free() {
 public void user_enter_invalid_input() {
     // Write code here that turns the phrase above into concrete actions
     //throw new io.cucumber.java.PendingException();
-	isValid=obj22.ins.is_the_input_available("ab");
+	isValid=obj22.ins.istheinputavailable("ab");
 	
 }
 
@@ -65,7 +65,7 @@ public void customer_try_to_reserve_a_reserved_time() {
     //throw new io.cucumber.java.PendingException();
 	
 	//isReserve=obj22.ins.is_Free("01");
-	isFree=obj22.ins.is_Free("01");
+	isFree=obj22.ins.isFree("01");
 }
 
 @Then("the time was a reserved")
@@ -79,7 +79,7 @@ public void the_time_was_a_reserved() {
 public void trying_to_make_this_time_free() {
     // Write code here that turns the phrase above into concrete actions
    // throw new io.cucumber.java.PendingException();
-	obj22.ins.make_Free("01");
+	obj22.ins.makeFree("01");
 }
 
 @Then("the time becomes free")
@@ -94,7 +94,7 @@ public void trying_to_make_this_time_reserved() {
     // Write code here that turns the phrase above into concrete actions
    // throw new io.cucumber.java.PendingException();
 	
-	obj22.ins.make_Reserve("01");
+	obj22.ins.makeReserve("01");
 	}
 
 

@@ -4,7 +4,7 @@ package p;
 import java.util.Arrays;
 
 
-public class install_req {
+public class InstallReq {
 	
 	public static char[][] values = new char[6][6];
 	public static String[] menuDays = {
@@ -26,7 +26,7 @@ public class install_req {
              "13:00-14:00"
 
      };
-	public install_req() {
+	public InstallReq() {
 		 Arrays.fill(values[0], 'R');  
 		 Arrays.fill(values[1], 'F');
 		 Arrays.fill(values[2], 'R');
@@ -36,7 +36,7 @@ public class install_req {
 		
 		
 	}
-	 public boolean is_the_input_available(String a) {boolean kk=true;
+	 public boolean istheinputavailable(String a) {boolean kk=true;
 		if(a.length()>2)kk=false;
 		if(a.length()<2)kk=false;
 		
@@ -51,7 +51,7 @@ public class install_req {
 		
 	}
 	
-	public boolean is_Free(String a) {
+	public boolean isFree(String a) {
 		
 		
 	
@@ -69,7 +69,7 @@ boolean rwe=false;
 		
 	}
 	
-	public void make_Free(String a) {
+	public void makeFree(String a) {
 		char c1=a.charAt(0);
 		char c2=a.charAt(1);
 		
@@ -79,7 +79,7 @@ boolean rwe=false;
 		values[r][c]='F';
 		
 	}
-	public void make_Reserve(String a) {
+	public void makeReserve(String a) {
 		char c1=a.charAt(0);
 		char c2=a.charAt(1);
 		
