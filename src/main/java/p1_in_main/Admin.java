@@ -72,7 +72,7 @@ public class Admin {
 		 System.out.println("3- edit image ");
 		 System.out.println("4- edit price ");
 		 System.out.println("5- edit availability ");
-		// System.out.println("5- go back ");
+		
 		 System.out.println(A);
 		 
 		 

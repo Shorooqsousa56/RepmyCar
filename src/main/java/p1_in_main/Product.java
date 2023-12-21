@@ -11,9 +11,9 @@ public class Product {
 	private String image;
 	private String price;
 	private String availability;
-	//********
-	//id     name      cat     desc      img              price      aval
-	//
+	
+	
+	
 	
 	
 	
@@ -162,8 +162,8 @@ public class Product {
     }
 	
 	
-	////setters and getters
-	///////////////////////////////////////////////////////////////////////////////////
+	
+	
 	public String getName() {
 		return name;
 	}

@@ -27,7 +27,7 @@ public class install_req {
 
      };
 	public install_req() {
-		 Arrays.fill(values[0], 'R');  //
+		 Arrays.fill(values[0], 'R');  
 		 Arrays.fill(values[1], 'F');
 		 Arrays.fill(values[2], 'R');
 		 Arrays.fill(values[3], 'F');
@@ -54,7 +54,7 @@ public class install_req {
 	public boolean is_Free(String a) {
 		
 		
-		//assume a is correct string
+	
 
 		char c1=a.charAt(0);
 		char c2=a.charAt(1);
@@ -115,7 +115,7 @@ public class install_req {
 		 
 		 System.out.println();
 		 
-		// System.out.print(menuDays[i++]+"   ");
+		
 		 
 		 for (int r=0; r<6; r++) {
 			 System.out.print(menuDays[i++]+"\t");
@@ -123,8 +123,8 @@ public class install_req {
 	            	
 	            	String s1 = Integer.toString(r); 
 	                String s2 =Integer.toString(c); 
-	            	//char c1=(char)(c+'0');
-	            	//char r1=(char)(r+'0');
+	            	
+	            	
 	                System.out.print(s1+s2+"-"+ values[r][c] + "\t"+"\t");
 	            }
 	            System.out.println();

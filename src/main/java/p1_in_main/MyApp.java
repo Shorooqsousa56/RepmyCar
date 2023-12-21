@@ -24,7 +24,7 @@ public class MyApp {
     private static final String MSGADD="we add to the bag successfully!";
     private static final String MSGADMN="s12028923@stu.najah.edu";
     private static final String MSGINVALID= "please enter valid input";
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
     public static ArrayList<Product> arrayProduct=new ArrayList<Product>();
     public static String ar0[]= {"p1","Interior","descr1","imgpath1","10$","yes"};
     public static String ar1[]= {"p2","Interior","descr2","imgpath2","20$","no"};
@@ -38,7 +38,7 @@ public class MyApp {
     static Product p4=new Product(ar3);
     static Product p5=new Product(ar4);
     static Product p6=new Product(ar5);
-    public static boolean TheProductIsInterior;//only for the test without main
+    public static boolean TheProductIsInterior;
     public static boolean TheProductIsExterior;
     public static boolean TheProductIsElectronics;
     public static boolean TheProductIsExist;
@@ -46,21 +46,21 @@ public class MyApp {
     public static Product pr=new Product();
     
     
-    //do not change the order 
+   
     static User u1=new User(MSGADMN,"Samah Qaradeh","19-11-2002","123abc","0594426881");
     static User u2=new User("shorooqsousa@gmail.com","Shoroq123","9-11-2003","123sh","0591038227");
     static User u3=new User("s12029069@stu.najah.edu","Shorooooq45","20-10-2007","123456","0594440337");
     public static String email;
     public static String password;
-    //ArrayUser.add(u1);
+   
      public  MyApp() {
-    	 //super();
+    	 
     	 arrayUser.add(0,u1);
 		 arrayUser.add(1,u2);
 		 arrayUser.add(2,u3);
 		 
 		 
-		 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
 		 arrayProduct.add(p1);
 		 arrayProduct.add(p2);
 		 arrayProduct.add(p3);
@@ -73,12 +73,11 @@ public class MyApp {
     }
     
      public static void main(String[] args) {
-  		/////////////////////////
+  		
   	     arrayUser.add(u1);
   		 arrayUser.add(u2);
   		 arrayUser.add(u3);
   		 
-  		 ////////////////////////////////////////////////////////////////////////////////////////////////
   		 arrayProduct.add(p1);
   		 arrayProduct.add(p2);
   		 arrayProduct.add(p3);
@@ -95,30 +94,23 @@ public class MyApp {
   			printLogInSignUpMenue();
   			n1=input.nextInt();
   			
-  			if(n1==1) {//log in
+  			if(n1==1) {
   				String s[]=logInForm();
   				isExist(s[0],s[1]);
-  				if(isLogIn) {//valid log in as customer,installer,admin
+  				if(isLogIn) {
   					System.out.println("log in Succeded");
-  				/////////////////////////////////////////////////////////////////////////////////////////////////////	
+  					
   				if(r.isCustomer(s[0],s[1], arrayUser)) {
-  					//1- show products
-  					//2- purchase bag
-  					//3- view orders history
-  					//4- make installation
-  					//5- view install history
-  					//6- view my profile
-  					//7- edit my profile
-  					//8- log out
+  					
   					int fi;
   					while(true) {
   					printCustomerMenu();
   					fi=input.nextInt();
-  					if(fi==1) {//1- show products
+  					if(fi==1) {
   						while(true) {
   							pr.printMenueForSearchProducts();
   							int z=input.nextInt();
-  							if(z==1) {//1- show everything (no search)
+  							if(z==1) {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									System.out.println(i+"\t"+arrayProduct.get(i));
@@ -152,7 +144,7 @@ public class MyApp {
   								
   								
   							}
-  							else if(z==2) {//2- search depends on Categories(Interior)
+  							else if(z==2) {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
@@ -191,7 +183,7 @@ public class MyApp {
   								
   								
   							}
-  							else if (z==3) {//search depends on Categories(Exterior)
+  							else if (z==3) {
   								
   								
   								pr.printTitle();
@@ -235,7 +227,7 @@ public class MyApp {
   								
   								
   							}
-  else if (z==4) {//search depends on Categories(Electronics)
+  else if (z==4) {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
@@ -276,7 +268,7 @@ public class MyApp {
   								
   								
   							}
-  							else if (z==5) {//search depends on availability
+  							else if (z==5) {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
@@ -317,7 +309,7 @@ public class MyApp {
   								
   								
   							}
-  							else if(z==6) {//search depends on name
+  							else if(z==6) {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
@@ -333,11 +325,11 @@ public class MyApp {
   									while(true) {
   									System.out.println("Please enter the product name to add to purchase bag");
   									String a=input.next();
-  									//if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct) ) {
+  									
   									if(pr.isTheProductExist(a, arrayProduct)&&pr.isItAvailable(a,arrayProduct))
   									{
   										int q=pr.whatIsTheID(a, arrayProduct);
-  										arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(q)   );///
+  										arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(q)   );
   										
   										
   										
@@ -381,7 +373,7 @@ public class MyApp {
   						
   						
   					}
-  					else if(fi==2) {//2- purchase bag
+  					else if(fi==2) {
   						boolean flag1=false;
   						if(arrayUser.get(userNumber).purchaseBag.size()>0) {
   						
@@ -413,13 +405,13 @@ public class MyApp {
   							else if (a==2) {
   								System.out.println("Done succesfully");
   								
-  								//ArrayList<Product>pu=new ArrayList<Product>();
+  								
   								ArrayList<Product>pu=  (ArrayList)arrayUser.get(userNumber).purchaseBag.clone();
   								arrayUser.get(userNumber).history.add(pu);
   								
   								arrayUser.get(userNumber).purchaseBag.clear();
   								
-  						        // Email properties
+  						        
   								String u="Your order is confirmed successfully\n";
                                   for(int i=0;i<pu.size();i++) {
                                  	u+=pu.get(i);
@@ -445,7 +437,7 @@ public class MyApp {
   						}
   						
   					}
-  					else if(fi==3) {//3- view orders history
+  					else if(fi==3) {
   						
   						for(int i=0;i<arrayUser.get(userNumber).history.size(); i++) {
   							System.out.println("***********This is order #"+i+"***********");
@@ -466,7 +458,7 @@ public class MyApp {
   						
   						
   					}
-                      else if(fi==4) {//4- make installation
+                      else if(fi==4) {
                       	boolean flag=false;
                       	while(true) {
                       	ins.printInstallmenu();
@@ -525,7 +517,7 @@ public class MyApp {
                       	
   						
   					}
-                      else if(fi==5) {//5- view install history
+                      else if(fi==5) {
   						for(int i=0;i<arrayUser.get(userNumber).myForm.size();i++) {
   							
   							System.out.println("Form "+i+":"+arrayUser.get(userNumber).myForm.get(i));
@@ -537,10 +529,10 @@ public class MyApp {
                       	
                       	
   					}
-                      else if(fi==6) {//6- view my profile
+                      else if(fi==6) {
   						System.out.println(arrayUser.get(userNumber));
   					}
-                      else if(fi==7) {//7- edit my profile
+                      else if(fi==7) {
                       	while(true) {
                       		
                       		Up.editUserProfileMenue();
@@ -586,7 +578,7 @@ public class MyApp {
                       	
   						
   					}
-                      else if(fi==8) {//8- log out
+                      else if(fi==8) {
   						break;
   					}
                       else {
@@ -594,7 +586,7 @@ public class MyApp {
                       }
   					
   					
-  					}//loop for the customer
+  					}
   					
   					
   					
@@ -607,7 +599,7 @@ public class MyApp {
   					while(true) {
   					myAdmin.printMenu();
   					int a=input.nextInt();
-  					if(a==1) {//product
+  					if(a==1) {
   						
   						while(true) {
   						myAdmin.printMenuProduct();
@@ -621,7 +613,7 @@ public class MyApp {
   							
   							
   						}
-  						else if(q==2) {//edit product
+  						else if(q==2) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
   								System.out.print(i+"\t");
@@ -637,7 +629,7 @@ public class MyApp {
   									int y=input.nextInt();
   									if(y>0 && y<6) {
   									f=true;
-  									/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  									
   									
   									System.out.println("Please enter the new value");
   									String z=input.next();
@@ -664,7 +656,7 @@ public class MyApp {
   							
   							
   						}
-  						else if(q==3) {//delete product
+  						else if(q==3) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
   								System.out.print(i+"\t");
@@ -685,7 +677,7 @@ public class MyApp {
   							
   						}
   						else if (q==4) {
-  							//break;
+  							
   							String ar[]=new String[6];
   							System.out.println("Please enter name");
   							ar[0]=input.next();
@@ -721,7 +713,7 @@ public class MyApp {
   						
   						}
   					}
-  					else if (a==2) {//customer
+  					else if (a==2) {
   						
   						
   						
@@ -769,13 +761,13 @@ public class MyApp {
   						
   						
   					}
-  					else if(a==3) {//installer
+  					else if(a==3) {
   						
   						instFun();
   						
   						
   					}
-  					else if(a==4) {//logout
+  					else if(a==4) {
   						break;
   					}
   					else {
@@ -804,7 +796,7 @@ public class MyApp {
   					
   					
   					
-  				///////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+  				
   					
   				}
   				else {
@@ -815,7 +807,7 @@ public class MyApp {
   				
   				
   			}
-  			else if(n1==2) {//sign up
+  			else if(n1==2) {
   				String s[]=signUpForm();
   				isValidSignUp(s);
   				if(isSignUp) {
@@ -829,21 +821,21 @@ public class MyApp {
   				}
   				
   			}
-  			else {//invalid input
+  			else {
   				System.out.println("You have entered invalid input, please try again!");
-  				//for(int i=0;i<arrayUser.size();i++) {
-  				//System.out.println(arrayUser.get(i).getBday());}
+  				
+  				
   			}
   			
   			
-  		}//end the big while
+  		}
   		
         
   		
-  	}//main
+  	}
   	
   	
-    //printingggggggggggggggggggggggg///////////////////////////////////////////
+   
  	
  	public static void printCustomerMenu() {
          int menuWidth = 30;
@@ -861,20 +853,20 @@ public class MyApp {
          };
          
 
-         // Print the top row of stars
+        
          for (int i = 0; i < menuWidth + 2; i++) {
              System.out.print("*");
          }
          System.out.println();
 
-         // Print the menu items with stars on the left and right columns
+        
          
          for (String item : menuItems) {
              System.out.println(" "+ item );
 
          }
 
-         // Print the bottom row of stars
+        
          for (int i = 0; i < menuWidth + 2; i++) {
              System.out.print("*");
          }
@@ -890,20 +882,20 @@ public class MyApp {
          };
          String menu = "Welcome to Car Accessories";
 
-         // Print the top row of stars
+        
          for (int i = 0; i < menuWidth + 2; i++) {
              System.out.print("*");
          }
          System.out.println();
 
-         // Print the menu items with stars on the left and right columns
+       
          System.out.println(" " + menu);
          for (String item : menuItems) {
              System.out.println(" "+ item );
 
          }
 
-         // Print the bottom row of stars
+        
          for (int i = 0; i < menuWidth + 2; i++) {
              System.out.print("*");
          }
@@ -1017,7 +1009,7 @@ public class MyApp {
 		
 	}
 	
-	 //printingggggggggggggggggggggggg///////////////////////////////////////////
+	
  	
 	
 	public static void notification(String u) {
@@ -1035,7 +1027,7 @@ public class MyApp {
         props.put("mail.smtp.port", "587");
 
         Session session = Session.getInstance(props, new Authenticator() {
-            protected PasswordAuthentication getPasswordAuthentication() {//s12029069@stu.najah.edu
+            protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, password);
             }
         });
@@ -1049,7 +1041,7 @@ public class MyApp {
            
                      message.setText(u);
             Transport.send(message);
-          //  flagNotificationOrder=true;
+         
 
             System.out.println("Email sent successfully!");
 
@@ -1060,7 +1052,7 @@ public class MyApp {
 	}
 	
 	
-	/////////
+	
 	public static boolean isVaildParameterInTheMenue(int a,int sizeOfMenue) {
 		
 		if(a<1) {return false;}
@@ -1082,12 +1074,12 @@ public class MyApp {
 		}
 		
 		
-		}//end for
+		}
 		
 		 isLogIn=q;
 		
 		
-		//return q;
+		
 	}
 	
 	
@@ -1096,14 +1088,14 @@ public class MyApp {
 		for(int i=0;i<arrayUser.size();i++) {
 			if(arrayUser.get(i).getEmail().equals(em)) {
 				q=false;
-				//isSignUp=false;
+				
 				
 				}
 			
 		}
 		isSignUp=q;
 		
-		//return isReserved;
+		
 		
 	}
 
@@ -1151,7 +1143,7 @@ public class MyApp {
 	}
 	
 	public static void isValidSignUp (String q[]) {
-		//email username bDay pwd phone
+		
 		 boolean f1,f2,f3;
 		 isReservedEmail(q[0]);
 		 f1=isSignUp;
@@ -1170,7 +1162,7 @@ public class MyApp {
 
 
 	public static void logOut() {
-		// TODO Auto-generated method stub
+		
 		isLogIn=false;
 	}
     
@@ -1178,7 +1170,7 @@ public class MyApp {
 	
 	
 
-}//class
+}
 
 
 
