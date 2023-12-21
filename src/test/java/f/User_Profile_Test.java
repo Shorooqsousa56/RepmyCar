@@ -3,7 +3,7 @@ package f;
 
 
 import static org.junit.Assert.assertTrue;
-import static p.MyApp.TheProductIsInterior;
+import static p.MyApp.theProductIsInterior;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

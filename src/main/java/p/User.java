@@ -7,7 +7,7 @@ public class User {
 	
 	 private String email;
 	 private String userName;
-	 private String Bday;
+	 private String bday;
 	 private String pwd;
 	 private String phone;
 	 public ArrayList<Product>purchaseBag=new ArrayList<Product>();
@@ -19,14 +19,14 @@ public class User {
 	
 	@Override
 	public String toString() {
-		return " email= " + email + "   ,userName= " + userName + "   ,Bday= " + Bday + "   ,pwd= " + pwd + "   ,phone= "
+		return " email= " + email + "   ,userName= " + userName + "   ,Bday= " + bday + "   ,pwd= " + pwd + "   ,phone= "
 				+ phone ;
 	}
 	public User(String email, String userName, String bday, String pwd, String phone) {
 		super();
 		this.email = email;
 		this.userName = userName;
-		Bday = bday;
+		this.bday = bday;
 		this.pwd = pwd;
 		this.phone = phone;
 	}
@@ -41,10 +41,10 @@ public class User {
 		this.userName = userName;
 	}
 	public String getBday() {
-		return Bday;
+		return bday;
 	}
 	public void setBday(String bday) {
-		Bday = bday;
+		this.bday = bday;
 	}
 	public String getPwd() {
 		return pwd;

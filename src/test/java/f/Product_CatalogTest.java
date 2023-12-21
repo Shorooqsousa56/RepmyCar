@@ -1,11 +1,11 @@
 package f;
 
 import static org.junit.Assert.assertTrue;
-import static p.MyApp.TheProductIsAvailable;
-import static p.MyApp.TheProductIsElectronics;
-import static p.MyApp.TheProductIsExist;
-import static p.MyApp.TheProductIsExterior;
-import static p.MyApp.TheProductIsInterior;
+import static p.MyApp.theProductIsAvailable;
+import static p.MyApp.theProductIsElectronics;
+import static p.MyApp.theProductIsExist;
+import static p.MyApp.theProductIsExterior;
+import static p.MyApp.theProductIsInterior;
 import static p.MyApp.arrayProduct;
 import static p.MyApp.pr;
 
@@ -31,7 +31,7 @@ public class Product_CatalogTest {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
 		
-		TheProductIsInterior=false;
+		theProductIsInterior=false;
 	}
 
 	@When("i try to search for Interior product if it is Interior or not")
@@ -39,7 +39,7 @@ public class Product_CatalogTest {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
 		//int q=0;
-		TheProductIsInterior=pr.isItInterior("p1", arrayProduct);
+		theProductIsInterior=pr.isItInterior("p1", arrayProduct);
 	
 	}
 
@@ -47,7 +47,7 @@ public class Product_CatalogTest {
 	public void the_product_is_interior() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-	assertTrue(TheProductIsInterior);
+	assertTrue(theProductIsInterior);
 	
 	}
 
@@ -55,21 +55,21 @@ public class Product_CatalogTest {
 	public void product_is_not_exterior() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		TheProductIsExterior=false;
+		theProductIsExterior=false;
 	}
 
 	@When("i try to search for Exterior product if it is Exterior or not")
 	public void i_try_to_search_for_exterior_product_if_it_is_exterior_or_not() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		TheProductIsExterior=pr.isItExterior("p3", arrayProduct);
+		theProductIsExterior=pr.isItExterior("p3", arrayProduct);
 	}
 
 	@Then("the product is Exterior")
 	public void the_product_is_exterior() {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-	assertTrue(TheProductIsExterior);
+	assertTrue(theProductIsExterior);
 	
 	}
 
@@ -77,7 +77,7 @@ public class Product_CatalogTest {
 	public void product_is_not_electronics() {
 	    // Write code here that turns the phrase above into concrete actions
 	  //  throw new io.cucumber.java.PendingException();
-	TheProductIsElectronics=false;
+	theProductIsElectronics=false;
 	
 	}
 
@@ -86,7 +86,7 @@ public class Product_CatalogTest {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
 	
-	TheProductIsElectronics=pr.isItElectronics("p5", arrayProduct);
+	theProductIsElectronics=pr.isItElectronics("p5", arrayProduct);
 	
 	}
 
@@ -94,14 +94,14 @@ public class Product_CatalogTest {
 	public void the_product_is_electronics() {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-	assertTrue(TheProductIsElectronics);
+	assertTrue(theProductIsElectronics);
 	}
 
 	@Given("product is not available")
 	public void product_is_not_available() {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-	TheProductIsAvailable=false;
+	theProductIsAvailable=false;
 	
 	}
 
@@ -109,7 +109,7 @@ public class Product_CatalogTest {
 	public void i_try_to_search_for_available_product_if_it_is_available_or_not() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		TheProductIsAvailable=pr.isItAvailable("p1", arrayProduct);
+		theProductIsAvailable=pr.isItAvailable("p1", arrayProduct);
 	
 	}
 
@@ -117,7 +117,7 @@ public class Product_CatalogTest {
 	public void the_product_is_available() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-	assertTrue(TheProductIsAvailable);
+	assertTrue(theProductIsAvailable);
 	
 	}
 
@@ -125,21 +125,21 @@ public class Product_CatalogTest {
 	public void the_product_is_not_exist() {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-	TheProductIsExist=false;
+	theProductIsExist=false;
 	}
 
 	@When("I try to search for exist product")
 	public void i_try_to_search_for_exist_product() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-	TheProductIsExist=pr.isTheProductExist("p5", arrayProduct);
+	theProductIsExist=pr.isTheProductExist("p5", arrayProduct);
 	}
 
 	@Then("the product is exist")
 	public void the_product_is_exist() {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-	assertTrue(TheProductIsExist);
+	assertTrue(theProductIsExist);
 	}
 
 	

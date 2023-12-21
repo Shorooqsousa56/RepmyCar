@@ -64,11 +64,11 @@ public class MyApp {
     static Product p4=new Product(ar3);
     static Product p5=new Product(ar4);
     static Product p6=new Product(ar5);
-    public static boolean TheProductIsInterior;
-    public static boolean TheProductIsExterior;
-    public static boolean TheProductIsElectronics;
-    public static boolean TheProductIsExist;
-    public static boolean TheProductIsAvailable;
+    public static boolean theProductIsInterior;
+    public static boolean theProductIsExterior;
+    public static boolean theProductIsElectronics;
+    public static boolean theProductIsExist;
+    public static boolean theProductIsAvailable;
     public static Product pr=new Product();
     
     
@@ -489,36 +489,36 @@ public class MyApp {
                       	while(true) {
                       	install_req.printInstallmenu();
                       	logger.info("Enter B to Return Back.\n");
-                      	String A=input.next();
-                          if(A.equals("B")) {break;}
+                      	String aaazx=input.next();
+                          if(aaazx.equals("B")) {break;}
                            while(true) {
-                          	if( ins.is_the_input_available(A)) {
+                          	if( ins.is_the_input_available(aaazx)) {
                           		
-                          		if(!ins.is_Free(A)) {
+                          		if(!ins.is_Free(aaazx)) {
                           			logger.info("This Date is Reserved Please Choose Another Date!.\n");
                           			break;
                           		}
                           		else {
-                          			 Form F=new Form();
-                          		    F.setUserName(arrayUser.get(userNumber).getUserName());
+                          			 Form fffty=new Form();
+                          		    fffty.setUserName(arrayUser.get(userNumber).getUserName());
                           		 
                           			logger.info("Reserved Done Succesfully!.\n");
-                          			ins.make_Reserve(A);
+                          			ins.make_Reserve(aaazx);
                           			logger.info("Please Enter Car Model:\n");
-                          			String A2=input.next();
-                          			F.setCarModel(A2);
+                          			String aaanm=input.next();
+                          			fffty.setCarModel(aaanm);
                           			logger.info("Please Enter Product Name:\n");
-                          			A2=input.next();
+                          			aaanm=input.next();
                           			logger.info(" Done Succesfully!.\n");
-                          			F.setProduct(A2);
-                          		    F.setDate(install_req.myDate(A));
-                          		    arrayUser.get(userNumber).myForm.add(F);
-                          		    installForm.add(F);
+                          			fffty.setProduct(aaanm);
+                          		    fffty.setDate(install_req.myDate(aaazx));
+                          		    arrayUser.get(userNumber).myForm.add(fffty);
+                          		    installForm.add(fffty);
                           		    
-                          		    notification("installation done succesfully "+F);
+                          		    notification("installation done succesfully "+fffty);
                           		    int us=userNumber;
                           		    userNumber=1;
-                          		    notification("There is customer who make install request"+F);
+                          		    notification("There is customer who make install request"+fffty);
                           		    userNumber=us;
                           		    
                           			flag=true;
@@ -537,7 +537,7 @@ public class MyApp {
                           	
                           	 
                            }
-                           if(flag==true)break;
+                           if(flag) {break;}
                       	}
                       	
                       	
@@ -952,7 +952,8 @@ public class MyApp {
  	
 
  	public static String[]logInForm(){
- 		String s1,s2;
+ 		String s1;
+ 		String s2;
  		logger.info("Please enter your email:");
  		Scanner input=new Scanner(System.in);
  		s1=input.next();
@@ -1170,7 +1171,10 @@ public class MyApp {
 
 	
 	public static void isSpecialChar(String userName) {
-		boolean s,c,n,sp;
+		boolean s;
+		boolean c;
+		boolean n;
+		boolean sp;
 		boolean q=true;
 		for(int i=0;i<userName.length();i++) {
 			s=false; c=false; n=false; sp=false;
@@ -1195,7 +1199,9 @@ public class MyApp {
 	
 	public static void isValidSignUp (String q[]) {
 		
-		 boolean f1,f2,f3;
+		 boolean f1;
+		 boolean f2;
+		 boolean f3;
 		 isReservedEmail(q[0]);
 		 f1=isSignUp;
 		 isMissingField(q);
