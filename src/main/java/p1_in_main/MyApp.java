@@ -25,7 +25,7 @@ public class MyApp {
         });
         try {
         logger.addHandler(consoleHandler);
-        logger.setLevel(Level.ALL);
+       // logger.setLevel(Level.ALL);
         }catch(Exception e) {
         	
         }
