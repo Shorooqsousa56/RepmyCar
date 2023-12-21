@@ -1068,7 +1068,7 @@ public class MyApp {
 		n=true;
 		
 	    final String username = MSGADMN;
-        final String password = "qcxb ceer pebu fkgn";
+       // final String password = "qcxb ceer pebu fkgn";
        
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -1079,7 +1079,7 @@ public class MyApp {
         Session session = Session.getInstance(props, new Authenticator() {
         	 @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(username, password);
+                return new PasswordAuthentication(username,"qcxb ceer pebu fkgn");
             }
         });
 
