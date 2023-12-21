@@ -1,4 +1,4 @@
-package f1;
+package f;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -6,8 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import p1.MyApp;
-import p1.Product;
+import p.MyApp;
+import p.Product;
 
 public class AdminTest {
 
@@ -51,7 +51,7 @@ public class AdminTest {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
 		
-		assertEquals(  obj.arrayProduct.get(0).getPrice(),"800"  );
+		assertEquals( "800" , obj.arrayProduct.get(0).getPrice() );
 	}
 
 	@When("admin try to delete product")

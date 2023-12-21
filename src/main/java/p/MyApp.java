@@ -1,6 +1,6 @@
 
 
-package p1;
+package p;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -114,7 +114,7 @@ public class MyApp {
   		 
   		Scanner input =new Scanner (System.in);
   		int n1;
-  		boolean b1;
+  		
 
   		while (true) {
   			printLogInSignUpMenue();
@@ -401,7 +401,7 @@ public class MyApp {
   					}
   					else if(fi==2) {
   						boolean flag1=false;
-  						if(arrayUser.get(userNumber).purchaseBag.size()>0) {
+  						if(!(arrayUser.get(userNumber).purchaseBag.isEmpty())) {
   						
   						pr.printTitle();
   						for(int i=0; i<arrayUser.get(userNumber).purchaseBag.size();i++) {
@@ -410,7 +410,7 @@ public class MyApp {
   						}
   						}
   						else logger.info("empty burchasebag !\n");
-  						while(arrayUser.get(userNumber).purchaseBag.size()>0) {
+  						while(!(arrayUser.get(userNumber).purchaseBag.isEmpty())) {
   							if(flag1)break;
   							pr.printMenuePurchse();
   							int a=input.nextInt();
@@ -960,8 +960,8 @@ public class MyApp {
  		logger.info("Please enter your password:");
  		s2=input.next();
  		logger.info("\n");
- 		String s[]= {s1,s2};
- 		return s;
+ 		
+ 		return new String[]{s1, s2};
  		
  	}
 
@@ -988,9 +988,10 @@ public class MyApp {
  		String number = input.next();
  		 logger.info("\n");
  		 
- 		String information[]= {email,name,bd,password,number};
+ 		
  	
- 		return information;
+ 		
+ 		return new String[]{email,name,bd,password,number};
  		
  		
  	}
@@ -1103,10 +1104,11 @@ public class MyApp {
 	
 	
 	public static boolean isVaildParameterInTheMenue(int a,int sizeOfMenue) {
+		boolean m=true;
+		if((a<1)||(a>sizeOfMenue) ){m=false;}
 		
-		if(a<1) {return false;}
-		if(a>sizeOfMenue) {return false;}
-		return true;
+		
+		return m;
 	}
 	
 	

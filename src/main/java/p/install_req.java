@@ -1,5 +1,5 @@
 
-package p1;
+package p;
 
 import java.util.Arrays;
 
@@ -36,17 +36,17 @@ public class install_req {
 		
 		
 	}
-	 public boolean is_the_input_available(String a) {
-		if(a.length()>2)return false;
-		if(a.length()<2)return false;
+	 public boolean is_the_input_available(String a) {boolean kk=true;
+		if(a.length()>2)kk=false;
+		if(a.length()<2)kk=false;
 		
 		char c1=a.charAt(0);
 		char c2=a.charAt(1);
 		
-		if(  (c1>'5')  ||   (c1<'0' )   )return false;
-		if(  (c2>'5')  ||   (c2<'0' )   )return false;
+		if(  (c1>'5')  ||   (c1<'0' )   )kk= false;
+		if(  (c2>'5')  ||   (c2<'0' )   )kk=false;
 		
-		return true;
+		return kk;
 		
 		
 	}
@@ -55,16 +55,16 @@ public class install_req {
 		
 		
 	
-
+boolean rwe=false;
 		char c1=a.charAt(0);
 		char c2=a.charAt(1);
 		
 		int r=c1-'0';
 		int c=c2-'0';
 		
-	if(values[r][c]=='F')return true;
+	if(values[r][c]=='F')rwe= true;
 	
-	return false;
+	return rwe;
 		
 		
 	}

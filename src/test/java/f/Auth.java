@@ -1,4 +1,4 @@
-package f1;
+package f;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import p1.MyApp;
+import p.MyApp;
 
 public class Auth {
 	public MyApp obj;

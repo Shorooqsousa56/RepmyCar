@@ -1,15 +1,15 @@
-package f1;
+package f;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static p1.MyApp.arrayUser;
-import static p1.MyApp.isLogIn;
-import static p1.MyApp.r;
+import static p.MyApp.arrayUser;
+import static p.MyApp.isLogIn;
+import static p.MyApp.r;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import p1.MyApp;
+import p.MyApp;
 
 public class RoleTest {
 	

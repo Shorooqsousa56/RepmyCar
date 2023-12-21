@@ -1,5 +1,5 @@
 
-package p1;
+package p;
 
 import java.util.ArrayList;
 

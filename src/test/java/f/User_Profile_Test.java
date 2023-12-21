@@ -1,13 +1,13 @@
-package f1;
+package f;
 
 
 
 import static org.junit.Assert.assertTrue;
-import static p1.MyApp.TheProductIsInterior;
+import static p.MyApp.TheProductIsInterior;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import p1.MyApp;
+import p.MyApp;
 
 public class User_Profile_Test {
 	
