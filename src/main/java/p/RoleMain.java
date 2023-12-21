@@ -4,17 +4,17 @@ package p;
 import java.util.ArrayList;
 
 public class RoleMain {
-	public boolean isAdmin(String email,String password){
+	public boolean isAdmin(String email,String paer){
 		boolean qq=false;
-		if(email.equals("s12028923@stu.najah.edu")&&  password.equals("123abc")) {
+		if(email.equals("s12028923@stu.najah.edu")&&  paer.equals("123abc")) {
 			qq=true;
 		}
 	return qq;
 		
 	}
-	public boolean isInstaller(String email,String password){
+	public boolean isInstaller(String email,String paer){
 		boolean nn=false;
-		if(email.equals("shorooqsousa@gmail.com")&&  password.equals("123sh")) {
+		if(email.equals("shorooqsousa@gmail.com")&&  paer.equals("123sh")) {
 			nn=true;
 		}
 	return nn;

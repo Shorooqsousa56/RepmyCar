@@ -860,30 +860,26 @@ public class MyApp {
   		
   	}
   	
-
-     public static String hashPassword(String password) {
-         try {
-             // Create a MessageDigest instance for SHA-256
-             MessageDigest digest = MessageDigest.getInstance("SHA-256");
-
-             // Get the password bytes
-             byte[] passwordBytes = password.getBytes(StandardCharsets.UTF_8);
-
-             // Update the digest with the password bytes
-             byte[] hashedBytes = digest.digest(passwordBytes);
-
-             // Convert the hashed bytes to a hexadecimal representation
-             StringBuilder hexStringBuilder = new StringBuilder();
-             for (byte b : hashedBytes) {
-                 hexStringBuilder.append(String.format("%02x", b));
-             }
-
-             return hexStringBuilder.toString();
-         } catch (NoSuchAlgorithmException e) {
-             // Handle the exception (e.g., log it or throw a runtime exception)
-             throw new RuntimeException("Error hashing password", e);
-         }
+    
+     public String hashPassword(String password) throws NoSuchAlgorithmException {
+         MessageDigest digest = MessageDigest.getInstance("SHA-256");
+         byte[] encodedHash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
+         return bytesToHex(encodedHash);
      }
+
+     private String bytesToHex(byte[] hash) {
+         StringBuilder hexString = new StringBuilder();
+         for (byte b : hash) {
+             String hex = Integer.toHexString(0xff & b);
+             if (hex.length() == 1) {
+                 hexString.append('0');
+             }
+             hexString.append(hex);
+         }
+         return hexString.toString();
+     }
+ 
+
  	
  	public static void printCustomerMenu() {
          int menuWidth = 30;
@@ -1097,7 +1093,7 @@ public class MyApp {
             logger.info("Email sent successfully!\n");
 
         } catch (MessagingException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
 		
 	}
