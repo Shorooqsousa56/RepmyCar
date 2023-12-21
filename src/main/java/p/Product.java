@@ -69,7 +69,7 @@ public class Product {
 		return a;
 	}
     
-	public Product(String ar[]) {
+	public Product(String []ar) {
 		super();
 		this.name = ar[0];
 		this.category = ar[1];

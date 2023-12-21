@@ -52,12 +52,12 @@ public class MyApp {
     private static final String MSGINVALID= "please enter valid input";
   
     public static ArrayList<Product> arrayProduct=new ArrayList<Product>();
-    public static String ar0[]= {"p1","Interior","descr1","imgpath1","10$","yes"};
-    public static String ar1[]= {"p2","Interior","descr2","imgpath2","20$","no"};
-    public static String ar2[]= {"p3","Exterior","descr3","imgpath3","30$","yes"};
-    public static String ar3[]= {"p4","Exterior","descr4","imgpath4","40$","no"};
-    public static String ar4[]= {"p5","Electronics","descr5","imgpath5","50$","yes"};
-    public static String ar5[]= {"p6","Electronics","descr6","imgpath6","60$","no"};
+    public static String []ar0= {"p1","Interior","descr1","imgpath1","10$","yes"};
+    public static String []ar1= {"p2","Interior","descr2","imgpath2","20$","no"};
+    public static String []ar2= {"p3","Exterior","descr3","imgpath3","30$","yes"};
+    public static String []ar3= {"p4","Exterior","descr4","imgpath4","40$","no"};
+    public static String []ar4= {"p5","Electronics","descr5","imgpath5","50$","yes"};
+    public static String []ar5= {"p6","Electronics","descr6","imgpath6","60$","no"};
     static Product p1=new Product(ar0);
     static Product p2=new Product(ar1);
     static Product p3=new Product(ar2);
@@ -121,7 +121,7 @@ public class MyApp {
   			n1=input.nextInt();
   			
   			if(n1==1) {
-  				String s[]=logInForm();
+  				String []s=logInForm();
   				isExist(s[0],s[1]);
   				if(isLogIn) {
   					logger.info("log in Succeded\n");
@@ -704,7 +704,7 @@ public class MyApp {
   						}
   						else if (q==4) {
   							
-  							String ar[]=new String[6];
+  							String []ar=new String[6];
   							logger.info("Please enter name\n");
   							ar[0]=input.next();
   							logger.info("Please enter category\n");
@@ -834,7 +834,7 @@ public class MyApp {
   				
   			}
   			else if(n1==2) {
-  				String s[]=signUpForm();
+  				String []s=signUpForm();
   				isValidSignUp(s);
   				if(isSignUp) {
   					User qw=new User(s[0],s[1],s[2],s[3],s[4]);
@@ -1064,7 +1064,7 @@ public class MyApp {
 		n=true;
 		
 	    final String username = MSGADMN;
-       // final String password = "qcxb ceer pebu fkgn";
+      
        
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -1093,7 +1093,7 @@ public class MyApp {
             logger.info("Email sent successfully!\n");
 
         } catch (MessagingException e) {
-          //  e.printStackTrace();
+       
         }
 		
 	}
@@ -1148,7 +1148,7 @@ public class MyApp {
 	}
 
 	
-	public static void isMissingField( String arS[]) {
+	public static void isMissingField( String []arS) {
 		boolean q=true;
 		for(int i=0; i<5; i++) {
 			
@@ -1193,7 +1193,7 @@ public class MyApp {
 		
 	}
 	
-	public static void isValidSignUp (String q[]) {
+	public static void isValidSignUp (String []q) {
 		
 		 boolean f1;
 		 boolean f2;
