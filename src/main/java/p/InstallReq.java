@@ -69,7 +69,7 @@ boolean rwe=false;
 		
 	}
 	
-	public void makeFree(String a) {
+	public static void makeFree(String a) {
 		char c1=a.charAt(0);
 		char c2=a.charAt(1);
 		
@@ -79,7 +79,7 @@ boolean rwe=false;
 		values[r][c]='F';
 		
 	}
-	public void makeReserve(String a) {
+	public static void makeReserve(String a) {
 		char c1=a.charAt(0);
 		char c2=a.charAt(1);
 		

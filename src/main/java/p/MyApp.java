@@ -503,7 +503,7 @@ public class MyApp {
                           		    fffty.setUserName(arrayUser.get(userNumber).getUserName());
                           		 
                           			logger.info("Reserved Done Succesfully!.\n");
-                          			ins.makeReserve(aaazx);
+                          			InstallReq.makeReserve(aaazx);
                           			logger.info("Please Enter Car Model:\n");
                           			String aaanm=input.next();
                           			fffty.setCarModel(aaanm);
@@ -1019,7 +1019,7 @@ public class MyApp {
 				while(true) {
 				String u=input.next();
 				if(ins.istheinputavailable(u)) {
-					ins.makeFree(u);
+					InstallReq.makeFree(u);
 					
 					break;
 				}
@@ -1034,7 +1034,7 @@ public class MyApp {
 				while(true) {
 				String u=input.next();
 				if(ins.istheinputavailable(u)) {
-					ins.makeReserve(u);
+					InstallReq.makeReserve(u);
 					
 					break;
 				}
