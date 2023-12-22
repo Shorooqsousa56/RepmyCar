@@ -19,15 +19,15 @@ public class MyApp {
         Handler consoleHandler = new ConsoleHandler();
         consoleHandler.setFormatter(new Formatter() {
             @Override
-            public String format(LogRecord record) {
-                return  record.getMessage();
+            public String format(LogRecord rem) {
+                return  rem.getMessage();
             }
         });
         try {
         logger.addHandler(consoleHandler);
        
         }catch(Exception e) {
-        	
+        	logger.info("there is exception");
         }
         Logger rootLogger = Logger.getLogger("");
         Handler[] handlers = rootLogger.getHandlers();
@@ -1099,7 +1099,7 @@ public class MyApp {
             logger.info("Email sent successfully!\n");
 
         } catch (MessagingException e) {
-       
+       logger.info("there is exception");
         }
 		
 	}
