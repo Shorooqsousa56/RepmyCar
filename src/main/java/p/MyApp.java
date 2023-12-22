@@ -229,8 +229,8 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItExterior(arrayProduct.get(i).getName())      )
-  									{String ty=i+"\t"+arrayProduct.get(i)+"\n";
-  									logger.info(ty);
+  									{String too=i+"\t "+arrayProduct.get(i)+"\n";
+  									logger.info(too);
   										
   										}
   									
@@ -238,16 +238,16 @@ public class MyApp {
   								
   								while(true) {
   									pr.printMenueInnerSearch();
-  									int ce;
-  									ce=input.nextInt();
-  									if(ce==1) {
+  									int qap;
+  									qap=input.nextInt();
+  									if(qap==1) {
   										
   										while(true) {
   										logger.info(MSGPB);
   										logger.info("\n");
-  										int a=input.nextInt();
-  										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName())&&arrayProduct.get(a).isItExterior(arrayProduct.get(a).getName())  ) {
-  											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
+  										int lnm=input.nextInt();
+  										if(lnm<arrayProduct.size() && ( lnm>=0) &&  arrayProduct.get(lnm).isItAvailable(arrayProduct.get(lnm).getName())&&arrayProduct.get(lnm).isItExterior(arrayProduct.get(lnm).getName())  ) {
+  											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(lnm)   );
   										
   											logger.info(MSGADD);
   											logger.info("\n");
@@ -258,7 +258,7 @@ public class MyApp {
   										
   										
   									}
-  									else if(ce==2) {
+  									else if(qap==2) {
   										
   										
   										
@@ -280,8 +280,8 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItElectronics(arrayProduct.get(i).getName())      )
-  									{String ty=i+"\t"+arrayProduct.get(i)+"\n";
-  									logger.info(ty);
+  									{String ovb=i+":\t"+arrayProduct.get(i)+"\n";
+  									logger.info(ovb);
   										
   									}
   									
@@ -289,16 +289,16 @@ public class MyApp {
   								
   								while(true) {
   									pr.printMenueInnerSearch();
-  									int ce;
-  									ce=input.nextInt();
-  									if(ce==1) {
+  									int mke;
+  									mke=input.nextInt();
+  									if(mke==1) {
   										
   										while(true) {
   										logger.info(MSGPB);
   										logger.info("\n");
-  										int a=input.nextInt();
-  										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName())&&arrayProduct.get(a).isItElectronics(arrayProduct.get(a).getName())  ) {
-  											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
+  										int rct=input.nextInt();
+  										if(rct<arrayProduct.size() && ( rct>=0) &&  arrayProduct.get(rct).isItAvailable(arrayProduct.get(rct).getName())&&arrayProduct.get(rct).isItElectronics(arrayProduct.get(rct).getName())  ) {
+  											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(rct)   );
   										
   											logger.info(MSGADD);
   											logger.info("\n");
@@ -309,7 +309,7 @@ public class MyApp {
   										
   										
   									}
-  									else if(ce==2) {
+  									else if(mke==2) {
   										break;
   									}
   									
@@ -326,8 +326,8 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItAvailable(arrayProduct.get(i).getName())      )
-  									{String ty=i+"\t"+arrayProduct.get(i)+"\n";
-  									logger.info(ty);
+  									{String fyu=i+"  \t"+arrayProduct.get(i)+"\n";
+  									logger.info(fyu);
   										
   										}
   									
@@ -335,16 +335,16 @@ public class MyApp {
   								
   								while(true) {
   									pr.printMenueInnerSearch();
-  									int ce;
-  									ce=input.nextInt();
-  									if(ce==1) {
+  									int ddf;
+  									ddf=input.nextInt();
+  									if(ddf==1) {
   										
   										while(true) {
   										logger.info(MSGPB);
   										logger.info("\n");
-  										int a=input.nextInt();
-  										if(a<arrayProduct.size() && ( a>=0) &&  pr.isItAvailable(arrayProduct.get(a).getName()) ) {
-  											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
+  										int onm=input.nextInt();
+  										if(onm<arrayProduct.size() && (onm>=0) &&  pr.isItAvailable(arrayProduct.get(onm).getName()) ) {
+  											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(onm)   );
   										
   											logger.info(MSGADD);
   											logger.info("\n");
@@ -355,7 +355,7 @@ public class MyApp {
   										
   										
   									}
-  									else if(ce==2) {
+  									else if(ddf==2) {
   										break;
   									}
   									
