@@ -178,11 +178,11 @@ public class MyApp {
   							else if(z==2) {
   								
   								pr.printTitle();
-  								for(int i=0; i<arrayProduct.size();i++) {
-  									if( arrayProduct.get(i).isItInterior(arrayProduct.get(i).getName())      )
+  								for(int ii=0; ii<arrayProduct.size();ii++) {
+  									if( arrayProduct.get(ii).isItInterior(arrayProduct.get(ii).getName())      )
   									{
-  										String ty=i+"\t"+arrayProduct.get(i)+"\n";
-  	  									logger.info(ty);
+  										String unn=ii+"\t"+arrayProduct.get(ii)+"\n";
+  	  									logger.info(unn);
   										
   									
   									}
@@ -191,16 +191,16 @@ public class MyApp {
   								
   								while(true) {
   									pr.printMenueInnerSearch();
-  									int ce;
-  									ce=input.nextInt();
-  									if(ce==1) {
+  									int wcv;
+  									wcv=input.nextInt();
+  									if(wcv==1) {
   										
   										while(true) {
   										logger.info(MSGPB);
-  										logger.info("\n");
-  										int a=input.nextInt();
-  										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName())&&arrayProduct.get(a).isItInterior(arrayProduct.get(a).getName())  ) {
-  											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
+  										logger.info(" \n");
+  										int aa=input.nextInt();
+  										if(aa<arrayProduct.size() && ( aa>=0) &&  arrayProduct.get(aa).isItAvailable(arrayProduct.get(aa).getName())&&arrayProduct.get(aa).isItInterior(arrayProduct.get(aa).getName())  ) {
+  											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(aa)   );
   										
   											logger.info(MSGADD);
   											logger.info("\n");
@@ -211,7 +211,7 @@ public class MyApp {
   										
   										
   									}
-  									else if(ce==2) {
+  									else if(wcv==2) {
   										
   										
   										break;
