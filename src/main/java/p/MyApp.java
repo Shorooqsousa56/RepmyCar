@@ -140,8 +140,9 @@ public class MyApp {
   							if(z==1) {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));
   									
+  									String ty=i+"\t"+arrayProduct.get(i)+"\n";
+  									logger.info(ty);
   								}
   								while(true) {
   								pr.printMenueInnerSearch();
