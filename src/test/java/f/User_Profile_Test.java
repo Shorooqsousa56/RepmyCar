@@ -23,7 +23,7 @@ public class User_Profile_Test {
 	@When("user try to edit userName")
 	public void user_try_to_edit_user_name() {
 	    // Write code here that turns the phrase above into concrete actions
-	    obj.up.editUserName("yazan",2,obj.arrayUser);
+	    obj.up.editUserName("yazan",2);
 		
 	}
 
@@ -41,7 +41,7 @@ public class User_Profile_Test {
 	@When("user try to edit Birthday")
 	public void user_try_to_edit_birthday() {
 	    // Write code here that turns the phrase above into concrete actions
-		obj.up. editbday("2/2/2002",2,obj.arrayUser);
+		obj.up. editbday("2/2/2002",2);
 	
 	}
 
@@ -59,7 +59,7 @@ public class User_Profile_Test {
 	@When("user try to edit pwd")
 	public void user_try_to_edit_pwd() {
 	    // Write code here that turns the phrase above into concrete actions
-		  obj.up.editpwd("123",2,obj.arrayUser);
+		  obj.up.editpwd("123",2);
 			
 	}
 
@@ -76,7 +76,7 @@ public class User_Profile_Test {
 	@When("user try to edit phone")
 	public void user_try_to_edit_phone() {
 	    // Write code here that turns the phrase above into concrete actions
-		obj.up.editphone("059837367",2,obj.arrayUser);
+		obj.up.editphone("059837367",2);
 	}
 
 	@Then("the phone was edited")

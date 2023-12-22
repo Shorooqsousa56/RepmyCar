@@ -19,29 +19,29 @@ public class UserProfile {
 	 }
 	
 	
-     public void  editUserName(String un,int unum,ArrayList <User>ar){
+     public void  editUserName(String un,int unum){
 		 
 		
-		ar.get(unum).setUserName(un);
+		MyApp.arrayUser.get(unum).setUserName(un);
 	
 		
 	}
 	
 	
 	
-	public void  editbday(String bd,int unum,ArrayList <User>ar){
-		ar.get(unum).setBday(bd);
+	public void  editbday(String bd,int unum){
+		MyApp.arrayUser.get(unum).setBday(bd);
 		
 	}
 	
-	public void  editpwd(String pwd,int unum,ArrayList <User>ar){
-		ar.get(unum).setPwd(pwd);
+	public void  editpwd(String pwd,int unum){
+		MyApp.arrayUser.get(unum).setPwd(pwd);
 		
 	}
 	
 	
-	public void  editphone(String phone,int unum,ArrayList <User>ar){
-		ar.get(unum).setPhone(phone);
+	public void  editphone(String phone,int unum){
+		MyApp.arrayUser.get(unum).setPhone(phone);
 		
 	}
 	

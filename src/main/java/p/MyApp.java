@@ -568,13 +568,13 @@ public class MyApp {
                       		if(as==1) {
                       			logger.info("please enter your new user name\n");
                       			sss=input.next();
-                      			up.editUserName(sss, userNumber, arrayUser);
+                      			up.editUserName(sss, userNumber);
                       			break;
                       		}
                       		else if(as==2) {
                       			logger.info("please enter your new birthday\n");
                       			sss=input.next();
-                      			up.editbday(sss, userNumber, arrayUser);
+                      			up.editbday(sss, userNumber);
                       			break;
                       			
                       			
@@ -582,7 +582,7 @@ public class MyApp {
                       		else if(as==3) {
                       			logger.info("please enter your new password\n");
                       			sss=input.next();
-                      			up.editpwd(sss, userNumber, arrayUser);
+                      			up.editpwd(sss, userNumber);
                       			break;
                       			
                       		}
@@ -590,7 +590,7 @@ public class MyApp {
                       			
                       			logger.info("please enter your new phone number\n");
                       			sss=input.next();
-                      			up.editphone(sss, userNumber, arrayUser);
+                      			up.editphone(sss, userNumber);
                       			break;
                       			
                       		}
