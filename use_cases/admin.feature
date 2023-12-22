@@ -13,5 +13,5 @@ Feature: Admin
   Scenario: deleting product
   When admin try to delete product
   Then the product is deleted
-
+  
   

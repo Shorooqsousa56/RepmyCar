@@ -35,6 +35,7 @@ public class MyApp {
             rootLogger.removeHandler(handlers[0]);
         }
     }
+    private static final String LOGFORMAT = "%d\t%s%n";
 	public static UserProfile up=new UserProfile();
 	public boolean t=true;
 	public static boolean n=false;
@@ -139,7 +140,7 @@ public class MyApp {
   							if(z==1) {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));
+  									logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));
   									
   								}
   								while(true) {
@@ -175,7 +176,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItInterior(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));}
+  									{logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));}
   									
   								}
   								
@@ -215,7 +216,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItExterior(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));}
+  									{logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));}
   									
   								}
   								
@@ -258,7 +259,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItElectronics(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));}
+  									{logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));}
   									
   								}
   								
@@ -299,7 +300,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItAvailable(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));}
+  									{logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));}
   									
   								}
   								
@@ -339,7 +340,7 @@ public class MyApp {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));
+  									logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));
   									
   								}
   								while(true) {
