@@ -110,7 +110,8 @@ boolean rwe=false;
 		 int i=0;
 		MyApp.logger.info("\t");
 		 for(int j=0;j<6;j++) {
-			 MyApp.logger.info(String.format("\t%s", menuhours[j]));
+			 String uvb="\t"+menuhours[j];
+			 MyApp.logger.info(uvb);
 
 		 }
 		 
@@ -119,14 +120,15 @@ boolean rwe=false;
 		
 		 
 		 for (int r=0; r<6; r++) {
-			 MyApp.logger.info(String.format("%s\t", menuDays[i++]));
+			 String zpo=menuDays[i++]+"\t";
+			 MyApp.logger.info(zpo);
 	            for (int c=0; c<6; c++) {
 	            	
 	            	String s1 = Integer.toString(r); 
 	                String s2 =Integer.toString(c); 
-	            		       
+	            		  String u=s1+s2+"-"+values[r][c]+"\t\t";     
 	         
-	                MyApp.logger.info(String.format("%s%s-%s\t\t", s1, s2, values[r][c]));
+	                MyApp.logger.info(u);
 
 	            }
 	            MyApp.logger.info("\n");

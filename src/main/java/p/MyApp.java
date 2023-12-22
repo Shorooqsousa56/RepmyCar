@@ -35,7 +35,7 @@ public class MyApp {
             rootLogger.removeHandler(handlers[0]);
         }
     }
-    private static final String LOGFORMAT = "%d\t%s%n";
+   
 	public static UserProfile up=new UserProfile();
 	public boolean t=true;
 	public static boolean n=false;
