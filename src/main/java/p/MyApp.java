@@ -182,17 +182,22 @@ public class MyApp {
   									if( arrayProduct.get(i).isItInterior(arrayProduct.get(i).getName())      )
   									{
   										String ty=i+"\t"+arrayProduct.get(i)+"\n";
-  	  									logger.info(ty);
+  	  									//1
+  										logger.info(ty);
   										
   									
   									}
   									
-  								}
+  									
+  								}//1
   								
   								while(true) {
   									pr.printMenueInnerSearch();
+  									
   									int ce;
+  								//1
   									ce=input.nextInt();
+  									
   									if(ce==1) {
   										
   										while(true) {
@@ -224,15 +229,21 @@ public class MyApp {
   								
   							}
   							else if (z==3) {
-  								
+  								//2
   								
   								pr.printTitle();
+  							//2
+  								
   								for(int i=0; i<arrayProduct.size();i++) {
+  								//2
   									if( arrayProduct.get(i).isItExterior(arrayProduct.get(i).getName())      )
-  									{String ty=i+"\t"+arrayProduct.get(i)+"\n";
+  									{      String ty=i+"\t"+arrayProduct.get(i)+"\n";
+  									
+  								//2
   									logger.info(ty);
   										
   										}
+  									
   									
   								}
   								
