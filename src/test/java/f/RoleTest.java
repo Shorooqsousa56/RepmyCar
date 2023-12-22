@@ -63,7 +63,7 @@ public MyApp obj22;
 	public void i_enter_email_and_password_inf_for_customer(String string, String string2) {
 	    // Write code here that turns the phrase above into concrete actions
 	  //  throw new io.cucumber.java.PendingException();
-		isLogIn=r.isCustomer(string, string2, arrayUser);
+		isLogIn=r.isCustomer(string, string2);
 	}
 
 	

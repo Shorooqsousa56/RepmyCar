@@ -127,7 +127,7 @@ public class MyApp {
   				if(isLogIn) {
   					logger.info("log in Succeded\n");
   					
-  				if(r.isCustomer(s[0],s[1], arrayUser)) {
+  				if(r.isCustomer(s[0],s[1])) {
   					
   					int fi;
   					while(true) {
