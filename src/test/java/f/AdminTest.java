@@ -34,7 +34,7 @@ public class AdminTest {
 	@Then("the product is added")
 	public void the_product_is_added() {
 	    
-		assertTrue(MyApp.pr.isTheProductExist("p7",obj.arrayProduct));
+		assertTrue(MyApp.pr.isTheProductExist("p7"));
 		
 	}
 
@@ -64,7 +64,7 @@ public class AdminTest {
 	@Then("the product is deleted")
 	public void the_product_is_deleted() {
 	   
-		assertTrue(MyApp.pr.isTheProductExist("p1",MyApp.arrayProduct));
+		assertTrue(MyApp.pr.isTheProductExist("p1"));
 		
 		//assertTrue(true);
 	}

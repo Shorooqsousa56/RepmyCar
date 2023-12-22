@@ -154,7 +154,7 @@ public class MyApp {
   									logger.info(MSGPB);
   									logger.info("\n");
   									int a=input.nextInt();
-  									if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct) ) {
+  									if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName()) ) {
   										arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   									
   										logger.info(MSGADD);
@@ -178,7 +178,7 @@ public class MyApp {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									if( arrayProduct.get(i).isItInterior(arrayProduct.get(i).getName(), arrayProduct)      )
+  									if( arrayProduct.get(i).isItInterior(arrayProduct.get(i).getName())      )
   									{
   										String ty=i+"\t"+arrayProduct.get(i)+"\n";
   	  									logger.info(ty);
@@ -198,7 +198,7 @@ public class MyApp {
   										logger.info(MSGPB);
   										logger.info("\n");
   										int a=input.nextInt();
-  										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItInterior(arrayProduct.get(a).getName(), arrayProduct)  ) {
+  										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName())&&arrayProduct.get(a).isItInterior(arrayProduct.get(a).getName())  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
   											logger.info(MSGADD);
@@ -225,7 +225,7 @@ public class MyApp {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									if( arrayProduct.get(i).isItExterior(arrayProduct.get(i).getName(), arrayProduct)      )
+  									if( arrayProduct.get(i).isItExterior(arrayProduct.get(i).getName())      )
   									{String ty=i+"\t"+arrayProduct.get(i)+"\n";
   									logger.info(ty);
   										
@@ -243,7 +243,7 @@ public class MyApp {
   										logger.info(MSGPB);
   										logger.info("\n");
   										int a=input.nextInt();
-  										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItExterior(arrayProduct.get(a).getName(), arrayProduct)  ) {
+  										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName())&&arrayProduct.get(a).isItExterior(arrayProduct.get(a).getName())  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
   											logger.info(MSGADD);
@@ -273,7 +273,7 @@ public class MyApp {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									if( arrayProduct.get(i).isItElectronics(arrayProduct.get(i).getName(), arrayProduct)      )
+  									if( arrayProduct.get(i).isItElectronics(arrayProduct.get(i).getName())      )
   									{String ty=i+"\t"+arrayProduct.get(i)+"\n";
   									logger.info(ty);
   										
@@ -291,7 +291,7 @@ public class MyApp {
   										logger.info(MSGPB);
   										logger.info("\n");
   										int a=input.nextInt();
-  										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItElectronics(arrayProduct.get(a).getName(), arrayProduct)  ) {
+  										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName())&&arrayProduct.get(a).isItElectronics(arrayProduct.get(a).getName())  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
   											logger.info(MSGADD);
@@ -319,7 +319,7 @@ public class MyApp {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									if( arrayProduct.get(i).isItAvailable(arrayProduct.get(i).getName(), arrayProduct)      )
+  									if( arrayProduct.get(i).isItAvailable(arrayProduct.get(i).getName())      )
   									{String ty=i+"\t"+arrayProduct.get(i)+"\n";
   									logger.info(ty);
   										
@@ -337,7 +337,7 @@ public class MyApp {
   										logger.info(MSGPB);
   										logger.info("\n");
   										int a=input.nextInt();
-  										if(a<arrayProduct.size() && ( a>=0) &&  pr.isItAvailable(arrayProduct.get(a).getName(), arrayProduct) ) {
+  										if(a<arrayProduct.size() && ( a>=0) &&  pr.isItAvailable(arrayProduct.get(a).getName()) ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
   											logger.info(MSGADD);
@@ -381,9 +381,9 @@ public class MyApp {
   									logger.info("Please enter the product name to add to purchase bag\n");
   									String a=input.next();
   									
-  									if(pr.isTheProductExist(a, arrayProduct)&&pr.isItAvailable(a,arrayProduct))
+  									if(pr.isTheProductExist(a)&&pr.isItAvailable(a))
   									{
-  										int q=pr.whatIsTheID(a, arrayProduct);
+  										int q=pr.whatIsTheID(a);
   										arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(q)   );
   										
   										

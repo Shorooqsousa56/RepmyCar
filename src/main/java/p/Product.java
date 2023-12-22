@@ -86,10 +86,10 @@ public class Product {
     }
 	
 	
-	public boolean isItInterior(String name,ArrayList <Product>ar) {
+	public boolean isItInterior(String name) {
 		
-		for(int i=0;i<ar.size();i++) {
-			if((ar.get(i).getName().equals(name))&&(ar.get(i).getCategory().equals("Interior") )	 ) {
+		for(int i=0;i<MyApp.arrayProduct.size();i++) {
+			if((MyApp.arrayProduct.get(i).getName().equals(name))&&(MyApp.arrayProduct.get(i).getCategory().equals("Interior") )	 ) {
 				return true;
 			}
 				
@@ -98,10 +98,10 @@ public class Product {
 		return false;
 	}
     
-    public boolean isItExterior(String name,ArrayList <Product>ar) {
+    public boolean isItExterior(String name) {
 		
-		for(int i=0;i<ar.size();i++) {
-		if((ar.get(i).getName().equals(name))&&(ar.get(i).getCategory().equals("Exterior") )	 ) {
+		for(int i=0;i<MyApp.arrayProduct.size();i++) {
+		if((MyApp.arrayProduct.get(i).getName().equals(name))&&(MyApp.arrayProduct.get(i).getCategory().equals("Exterior") )	 ) {
 			return true;
 		}
 			
@@ -111,10 +111,10 @@ public class Product {
 		return false;
 	}
     
-    public boolean isItElectronics(String name,ArrayList <Product>ar) {
+    public boolean isItElectronics(String name) {
 	
-	for(int i=0;i<ar.size();i++) {
-	if((ar.get(i).getName().equals(name))&&(ar.get(i).getCategory().equals("Electronics") )	 ) {
+	for(int i=0;i<MyApp.arrayProduct.size();i++) {
+	if((MyApp.arrayProduct.get(i).getName().equals(name))&&(MyApp.arrayProduct.get(i).getCategory().equals("Electronics") )	 ) {
 		return true;
 	}
 		
@@ -124,10 +124,10 @@ public class Product {
 	return false;
 }
     
-    public boolean isItAvailable(String name,ArrayList <Product>ar) {
+    public boolean isItAvailable(String name) {
     	
-	for(int i=0;i<ar.size();i++) {
-	if((ar.get(i).getName().equals(name))&&(ar.get(i).getAvailability().equals("yes") )	 ) {
+	for(int i=0;i<MyApp.arrayProduct.size();i++) {
+	if((MyApp.arrayProduct.get(i).getName().equals(name))&&(MyApp.arrayProduct.get(i).getAvailability().equals("yes") )	 ) {
 		return true;
 	}
 		
@@ -137,10 +137,10 @@ public class Product {
 	return false;
 }
 
-    public boolean isTheProductExist(String name,ArrayList <Product>ar) {
+    public boolean isTheProductExist(String name) {
     	
-    	for(int i=0;i<ar.size();i++) {
-    	if((ar.get(i).getName().equals(name))	 ) {
+    	for(int i=0;i<MyApp.arrayProduct.size();i++) {
+    	if((MyApp.arrayProduct.get(i).getName().equals(name))	 ) {
     		return true;
     	}
     		
@@ -150,10 +150,10 @@ public class Product {
     	return false;
     }
 	
-    public int whatIsTheID(String name,ArrayList <Product>ar) {
+    public int whatIsTheID(String name) {
     	
-    	for(int i=0;i<ar.size();i++) {
-    		if(name.equals(ar.get(i).getName()))return i;
+    	for(int i=0;i<MyApp.arrayProduct.size();i++) {
+    		if(name.equals(MyApp.arrayProduct.get(i).getName()))return i;
     		
     		
     	}
