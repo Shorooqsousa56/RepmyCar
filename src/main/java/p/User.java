@@ -10,8 +10,8 @@ public class User {
 	 private String bday;
 	 private String pwd;
 	 private String phone;
-	 public ArrayList<Product>purchaseBag=new ArrayList<Product>();
-	 public ArrayList<Form>myForm=new ArrayList<Form>();
+	 public ArrayList<Product>purchaseBag=new ArrayList<>();
+	 public ArrayList<Form>myForm=new ArrayList<>();
 	 
 	 public ArrayList< ArrayList<Product>   >history=new ArrayList<ArrayList<Product>>();
 	 

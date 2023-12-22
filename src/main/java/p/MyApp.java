@@ -45,14 +45,14 @@ public class MyApp {
 	public static boolean isSignUp=false;
 	public static RoleMain r=new RoleMain();
 	public static InstallReq ins=new InstallReq();
-    public static ArrayList<User> arrayUser=new ArrayList<User>();
-    public static ArrayList<Form> installForm=new ArrayList<Form>();
+    public static ArrayList<User> arrayUser=new ArrayList<>();
+    public static ArrayList<Form> installForm=new ArrayList<>();
     private static final String MSGPB="Please enter the number to add to purchase bag";
     private static final String MSGADD="we add to the bag successfully!";
     private static final String MSGADMN="s12028923@stu.najah.edu";
     private static final String MSGINVALID= "please enter valid input";
   
-    public static ArrayList<Product> arrayProduct=new ArrayList<Product>();
+    public static ArrayList<Product> arrayProduct=new ArrayList<>();
     public static String []ar0= {"p1","Interior","descr1","imgpath1","10$","yes"};
     public static String []ar1= {"p2","Interior","descr2","imgpath2","20$","no"};
     public static String []ar2= {"p3","Exterior","descr3","imgpath3","30$","yes"};
