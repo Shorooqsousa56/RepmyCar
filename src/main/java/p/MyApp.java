@@ -179,7 +179,12 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItInterior(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));}
+  									{
+  										String ty=i+"\t"+arrayProduct.get(i)+"\n";
+  	  									logger.info(ty);
+  										
+  									
+  									}
   									
   								}
   								
@@ -221,7 +226,10 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItExterior(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));}
+  									{String ty=i+"\t"+arrayProduct.get(i)+"\n";
+  									logger.info(ty);
+  										
+  										}
   									
   								}
   								
@@ -266,7 +274,10 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItElectronics(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));}
+  									{String ty=i+"\t"+arrayProduct.get(i)+"\n";
+  									logger.info(ty);
+  										
+  									}
   									
   								}
   								
@@ -309,7 +320,10 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItAvailable(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));}
+  									{String ty=i+"\t"+arrayProduct.get(i)+"\n";
+  									logger.info(ty);
+  										
+  										}
   									
   								}
   								
@@ -351,7 +365,10 @@ public class MyApp {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									logger.info(String.format(LOGFORMAT, i, arrayProduct.get(i)));
+  									String ty=i+"\t"+arrayProduct.get(i)+"\n";
+  									logger.info(ty);
+  									
+  									
   									
   								}
   								while(true) {
@@ -418,8 +435,10 @@ public class MyApp {
   						
   						pr.printTitle();
   						for(int i=0; i<arrayUser.get(userNumber).purchaseBag.size();i++) {
-  							logger.info(String.format("%d\t", i));
-  					    logger.info(arrayUser.get(userNumber).purchaseBag.get(i)+"\n");
+  							String fgh=i+"\t";
+  							logger.info(fgh);
+  							String amnk=arrayUser.get(userNumber).purchaseBag.get(i)+"\n";
+  					    logger.info(amnk);
   						}
   						}
   						else logger.info("empty burchasebag !\n");
@@ -479,15 +498,18 @@ public class MyApp {
   					else if(fi==3) {
   						
   						for(int i=0;i<arrayUser.get(userNumber).history.size(); i++) {
-  							logger.info(String.format("***********This is order #%d***********%n", i));
+  							String vb="***********This is order #"+i+"***********\n";
+  							logger.info(vb);
   							pr.printTitle();
   							
   							for(int m=0;m<arrayUser.get(userNumber).history.get(i).size(); m++) {
-  								logger.info(m+"\t");
-  								logger.info(
-  						arrayUser.get(userNumber).history.get(i).get(m)+"\n"
+  								String rvhlk=m+"\t";
+  								logger.info(rvhlk);
+  								String vpoiu=arrayUser.get(userNumber).history.get(i).get(m)+"\n";
+  								logger.info(vpoiu	);
+  						
   										
-  										);
+  									
   								
   								
   							}
@@ -558,8 +580,8 @@ public class MyApp {
   					}
                       else if(fi==5) {
   						for(int i=0;i<arrayUser.get(userNumber).myForm.size();i++) {
-  							
-  							logger.info("Form "+i+":"+arrayUser.get(userNumber).myForm.get(i)+"\n");
+  							String ubbbbb="Form "+i+":"+arrayUser.get(userNumber).myForm.get(i)+"\n";
+  							logger.info(ubbbbb);
   							logger.info("****************************************************\n");
   							
   							
@@ -568,8 +590,8 @@ public class MyApp {
                       	
                       	
   					}
-                      else if(fi==6) {
-  						logger.info(arrayUser.get(userNumber)+"\n");
+                      else if(fi==6) {String oooo=arrayUser.get(userNumber)+"\n";
+  						logger.info(oooo);
   					}
                       else if(fi==7) {
                       	while(true) {
@@ -646,8 +668,10 @@ public class MyApp {
   						if(q==1) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
-  								logger.info(String.format("%d\t", i));
-  								logger.info(arrayProduct.get(i)+"\n");
+  								String qazzz=i+"\t";
+  								String vvmbh=arrayProduct.get(i)+"\n";
+  								logger.info(qazzz);
+  								logger.info(vvmbh);
   							}
   							
   							
@@ -655,8 +679,12 @@ public class MyApp {
   						else if(q==2) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
-  								logger.info(String.format("%d\t", i));
-  								logger.info(arrayProduct.get(i)+"\n");}
+  								String qazzzt=i+"\t";
+  								String vvmbht=arrayProduct.get(i)+"\n";
+  								logger.info(qazzzt);
+  								logger.info(vvmbht);
+  								
+  								}
   							boolean f=false;
   							while(true) {
   								if(f)break;
@@ -699,8 +727,15 @@ public class MyApp {
   						else if(q==3) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
-  								logger.info(String.format("%d\t", i));
-  								logger.info(arrayProduct.get(i)+"\n");}
+  								
+  								String qv=i+"\t";
+  								String vv=arrayProduct.get(i)+"\n";
+  								logger.info(qv);
+  								logger.info(vv);
+  							
+  							
+  							
+  							}
   							while(true) {
   								logger.info("enter index you want to delete\n");
   								int g;
@@ -766,16 +801,22 @@ public class MyApp {
   							int u=input.nextInt();
   							if(u==1) {
   								for(int i=2;i<arrayUser.size();i++) {
-  									logger.info((i-2)+"- ");
-  									logger.info(arrayUser.get(i)+"\n");
+  									String tc=(i-2)+"- ";
+  									String vbmn=arrayUser.get(i)+"\n";
+  									logger.info(tc);
+  									logger.info(vbmn);
   							
   							}
   								
   							}
   							else if(u==2) {
   								for(int i=2;i<arrayUser.size();i++) {
-  									logger.info((i-2)+"- ");
-  									logger.info(arrayUser.get(i)+"\n");
+  									
+  									String tcl=(i-2)+"- ";
+  									String vbmnl=arrayUser.get(i)+"\n";
+  									logger.info(tcl);
+  									logger.info(vbmnl);
+  									
   							
   							}
   								while(true) {
@@ -1032,7 +1073,8 @@ public class MyApp {
 			int za=input.nextInt();
 			if(za==1) {
 		for(int i=0;i<installForm.size();i++) {
-			logger.info(installForm.get(i)+"\n");
+			String ldk=installForm.get(i)+"\n";
+			logger.info(ldk);
 			
 		}
 				
