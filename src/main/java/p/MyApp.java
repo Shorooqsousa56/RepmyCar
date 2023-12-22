@@ -150,12 +150,14 @@ public class MyApp {
   								if(ce==1) {
   									
   									while(true) {
-  									logger.info(MSGPB+"\n");
+  									logger.info(MSGPB);
+  									logger.info("\n");
   									int a=input.nextInt();
   									if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct) ) {
   										arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   									
-  										logger.info(MSGADD+"\n");
+  										logger.info(MSGADD);
+  										logger.info("\n");
   										break;
   									}
   									
@@ -187,12 +189,14 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										logger.info(MSGPB+"\n");
+  										logger.info(MSGPB);
+  										logger.info("\n");
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItInterior(arrayProduct.get(a).getName(), arrayProduct)  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											logger.info(MSGADD+"\n");
+  											logger.info(MSGADD);
+  											logger.info("\n");
   											break;
   										}
   										
@@ -227,12 +231,14 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										logger.info(MSGPB+"\n");
+  										logger.info(MSGPB);
+  										logger.info("\n");
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItExterior(arrayProduct.get(a).getName(), arrayProduct)  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											logger.info(MSGADD+"\n");
+  											logger.info(MSGADD);
+  											logger.info("\n");
   											break;
   										}
   										
@@ -270,12 +276,14 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										logger.info(MSGPB+"\n");
+  										logger.info(MSGPB);
+  										logger.info("\n");
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  arrayProduct.get(a).isItAvailable(arrayProduct.get(a).getName(), arrayProduct)&&arrayProduct.get(a).isItElectronics(arrayProduct.get(a).getName(), arrayProduct)  ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											logger.info(MSGADD+"\n");
+  											logger.info(MSGADD);
+  											logger.info("\n");
   											break;
   										}
   										
@@ -311,12 +319,14 @@ public class MyApp {
   									if(ce==1) {
   										
   										while(true) {
-  										logger.info(MSGPB+"\n");
+  										logger.info(MSGPB);
+  										logger.info("\n");
   										int a=input.nextInt();
   										if(a<arrayProduct.size() && ( a>=0) &&  pr.isItAvailable(arrayProduct.get(a).getName(), arrayProduct) ) {
   											arrayUser.get(userNumber).purchaseBag.add(arrayProduct.get(a)   );
   										
-  											logger.info(MSGADD+"\n");
+  											logger.info(MSGADD);
+  											logger.info("\n");
   											break;
   										}
   										
@@ -360,7 +370,8 @@ public class MyApp {
   										
   										
   										
-  										logger.info(MSGADD+"\n");
+  										logger.info(MSGADD);
+  										logger.info("\n");
   										break;
   										
   									}
@@ -670,7 +681,8 @@ public class MyApp {
   									break;	
   									}
   									else {
-  										logger.info(MSGINVALID+"\n");
+  										logger.info(MSGINVALID);
+  										logger.info("\n");
   									}
   									}
   								}
@@ -692,7 +704,9 @@ public class MyApp {
   								logger.info("enter index you want to delete\n");
   								int g;
   								g=input.nextInt();
-  								if((g<0)||g>arrayProduct.size())logger.info(MSGINVALID+"\n");
+  								if((g<0)||g>arrayProduct.size()) {logger.info(MSGINVALID);
+  								logger.info("\n");
+  								}
   								else {
   									arrayProduct.remove(g);
   									logger.info("done successfully\n");
@@ -733,7 +747,8 @@ public class MyApp {
   							
   						}
   						else {
-  							logger.info(MSGINVALID+"\n");
+  							logger.info(MSGINVALID);
+  							logger.info("\n");
   							
   						}
   						
@@ -770,7 +785,8 @@ public class MyApp {
   										break;
   									}
   									else {
-  										logger.info(MSGINVALID+"\n");
+  										logger.info(MSGINVALID);
+  										logger.info("\n");
   									}
   								}
   								
@@ -798,7 +814,8 @@ public class MyApp {
   						break;
   					}
   					else {
-  						logger.info(MSGINVALID+"\n");
+  						logger.info(MSGINVALID);
+  						logger.info("\n");
   					}
   					
   					}
@@ -911,7 +928,9 @@ public class MyApp {
         
          
          for (String item : menuItems) {
-             logger.info(" "+ item +"\n");
+             logger.info(" ");
+             logger.info(item);
+             logger.info("\n");
 
          }
 
@@ -939,9 +958,13 @@ public class MyApp {
          logger.info("\n");
 
        
-         logger.info(" " + menu+"\n");
+         logger.info(" " );
+         logger.info(menu);
+         logger.info("\n");
          for (String item : menuItems) {
-             logger.info(" "+ item+"\n" );
+             logger.info(" ");
+             logger.info(item);
+             logger.info("\n");
 
          }
 
@@ -1016,7 +1039,8 @@ public class MyApp {
 			}
 			else if(za==2) {
 				InstallReq.printInstallmenu();
-				logger.info("please enter symbol"+"\n");
+				logger.info("please enter symbol");
+				logger.info("\n");
 				while(true) {
 				String u=input.next();
 				if(ins.istheinputavailable(u)) {
@@ -1025,7 +1049,8 @@ public class MyApp {
 					break;
 				}
 				else {
-					logger.info(MSGINVALID+"\n");
+					logger.info(MSGINVALID);
+					logger.info("\n");
 				}
 				}
 			}
@@ -1040,7 +1065,8 @@ public class MyApp {
 					break;
 				}
 				else {
-					logger.info(MSGINVALID+"\n");
+					logger.info(MSGINVALID);
+					logger.info("\n");
 				}
 				}
 				
@@ -1053,7 +1079,8 @@ public class MyApp {
             	break;
             }
             else {
-            	logger.info(MSGINVALID+"\n");
+            	logger.info(MSGINVALID);
+            	logger.info("\n");
             }
 			
 			
