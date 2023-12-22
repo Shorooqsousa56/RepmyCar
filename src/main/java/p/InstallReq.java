@@ -6,8 +6,8 @@ import java.util.Arrays;
 
 public class InstallReq {
 	
-	public static char[][] values = new char[6][6];
-	public static String[] menuDays = {
+	protected static char[][] values = new char[6][6];
+	protected static String[] menuDays = {
              "Saturday  ",
              "Sunday    " ,
              "Monday    ",
@@ -17,7 +17,7 @@ public class InstallReq {
 
      };
 	 
-	public static String[] menuhours = {
+	protected static String[] menuhours = {
              "08:00-09:00",
              "09:00-10:00" ,
              "10:00-11:00",
