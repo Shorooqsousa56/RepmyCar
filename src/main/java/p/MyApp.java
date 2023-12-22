@@ -139,7 +139,7 @@ public class MyApp {
   							if(z==1) {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									logger.info(i+"\t"+arrayProduct.get(i)+"\n");
+  									logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));
   									
   								}
   								while(true) {
@@ -175,7 +175,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItInterior(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(i+"\t"+arrayProduct.get(i)+"\n");}
+  									{logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));}
   									
   								}
   								
@@ -215,7 +215,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItExterior(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(i+"\t"+arrayProduct.get(i)+"\n");}
+  									{logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));}
   									
   								}
   								
@@ -258,7 +258,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItElectronics(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(i+"\t"+arrayProduct.get(i)+"\n");}
+  									{logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));}
   									
   								}
   								
@@ -299,7 +299,7 @@ public class MyApp {
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
   									if( arrayProduct.get(i).isItAvailable(arrayProduct.get(i).getName(), arrayProduct)      )
-  									{logger.info(i+"\t"+arrayProduct.get(i)+"\n");}
+  									{logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));}
   									
   								}
   								
@@ -339,7 +339,7 @@ public class MyApp {
   								
   								pr.printTitle();
   								for(int i=0; i<arrayProduct.size();i++) {
-  									logger.info(i+"\t"+arrayProduct.get(i)+"\n");
+  									logger.info(String.format("%d\t%s%n", i, arrayProduct.get(i)));
   									
   								}
   								while(true) {
@@ -405,7 +405,7 @@ public class MyApp {
   						
   						pr.printTitle();
   						for(int i=0; i<arrayUser.get(userNumber).purchaseBag.size();i++) {
-  							logger.info(i+"\t");
+  							logger.info(String.format("%d\t", i));
   					    logger.info(arrayUser.get(userNumber).purchaseBag.get(i)+"\n");
   						}
   						}
@@ -466,7 +466,7 @@ public class MyApp {
   					else if(fi==3) {
   						
   						for(int i=0;i<arrayUser.get(userNumber).history.size(); i++) {
-  							logger.info("***********This is order #"+i+"***********\n");
+  							logger.info(String.format("***********This is order #%d***********%n", i));
   							pr.printTitle();
   							
   							for(int m=0;m<arrayUser.get(userNumber).history.get(i).size(); m++) {
@@ -633,7 +633,7 @@ public class MyApp {
   						if(q==1) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
-  								logger.info(i+"\t");
+  								logger.info(String.format("%d\t", i));
   								logger.info(arrayProduct.get(i)+"\n");
   							}
   							
@@ -642,7 +642,7 @@ public class MyApp {
   						else if(q==2) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
-  								logger.info(i+"\t");
+  								logger.info(String.format("%d\t", i));
   								logger.info(arrayProduct.get(i)+"\n");}
   							boolean f=false;
   							while(true) {
@@ -685,7 +685,7 @@ public class MyApp {
   						else if(q==3) {
   							pr.printTitle();
   							for(int i=0; i<arrayProduct.size();i++) {
-  								logger.info(i+"\t");
+  								logger.info(String.format("%d\t", i));
   								logger.info(arrayProduct.get(i)+"\n");}
   							while(true) {
   								logger.info("enter index you want to delete\n");
