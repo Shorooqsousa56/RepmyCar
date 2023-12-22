@@ -847,6 +847,10 @@ public class MyApp {
   				}
   				
   			}
+  			else if(n1==3) {
+  				logger.info("goodbye \n");
+  				break;
+  			}
   			else {
   				logger.info("You have entered invalid input, please try again!\n");
   				
@@ -921,7 +925,8 @@ public class MyApp {
          int menuWidth = 30;
          String[] menuItems = {
                  "1. Log  IN",
-                 "2. Sign Up"
+                 "2. Sign Up",
+                 "3. Exit"
 
          };
          String menu = "Welcome to Car Accessories";
