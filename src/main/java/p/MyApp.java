@@ -15,7 +15,26 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 public class MyApp {
 	 static final Logger logger = Logger.getLogger(MyApp.class.getName());
-   
+	 static {
+	        Handler consoleHandler = new ConsoleHandler();
+	        consoleHandler.setFormatter(new Formatter() {
+	            @Override
+	            public String format(LogRecord rem) {
+	                return  rem.getMessage();
+	            }
+	        });
+	        try {
+	        logger.addHandler(consoleHandler);
+	       
+	        }catch(Exception e) {
+	        	logger.info("there is exception");
+	        }
+	        Logger rootLogger = Logger.getLogger("");
+	        Handler[] handlers = rootLogger.getHandlers();
+	        if (handlers[0] instanceof ConsoleHandler) {
+	            rootLogger.removeHandler(handlers[0]);
+	        }
+	    }
    
 	public static UserProfile up=new UserProfile();
 	public boolean t=true;
@@ -148,6 +167,7 @@ public class MyApp {
   									
   								}
   								else if(ce==2) {
+  									
   									break;
   								}
   								
@@ -192,6 +212,8 @@ public class MyApp {
   										
   									}
   									else if(ce==2) {
+  										
+  										
   										break;
   									}
   									
@@ -237,6 +259,9 @@ public class MyApp {
   										
   									}
   									else if(ce==2) {
+  										
+  										
+  										
   										break;
   									}
   									
@@ -280,12 +305,26 @@ public class MyApp {
   											break;
   										}
   										
+  										
+  										///
+  										
+  										
+  										
   										}
+  										
+  										
   										
   										
   									}
   									else if(ce==2) {
+  										
+  										
+  										
+  										
+  										
+  										
   										break;
+  										
   									}
   									
   									}
