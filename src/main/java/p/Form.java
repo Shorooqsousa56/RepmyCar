@@ -1,4 +1,4 @@
-package p_1;
+package p;
 
 public class Form {
 

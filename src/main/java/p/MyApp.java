@@ -1,6 +1,8 @@
+package p;
 
 
-package p_1;
+
+
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -26,7 +28,7 @@ public class MyApp {
 	public static boolean isSignUp=false;
 	public static RoleMain r=new RoleMain();
 	public static InstallReq ins=new InstallReq();
-    public static ArrayList<User> arrayUser=new ArrayList<User>();
+    public static ArrayList<User> arrayUser=new ArrayList<>();
     public static ArrayList<Form> installForm=new ArrayList<>();
     private static final String MSGPB="Please enter the number to add to purchase bag";
     private static final String MSGADD="we add to the bag successfully!";
@@ -124,7 +126,7 @@ public class MyApp {
   									
   									String ty=i+"\t"+arrayProduct.get(i)+"\n";
   									
-  									System.out.println(ty);
+  									logger.info(ty);
   								}
   								while(true) {
   								pr.printMenueInnerSearch();
@@ -1016,8 +1018,10 @@ public class MyApp {
  		logger.info("Please enter your password:");
  		s2=input.next();
  		logger.info("\n");
- 		String s[]={s1, s2};
- 		return s;
+ 		
+ 		
+ 		
+ 		return new String[]{s1, s2};
  		
  	}
  	
@@ -1026,7 +1030,7 @@ public class MyApp {
  	
  	
  	
- 	//new String[]{s1, s2};
+ 	
 
  	public static String [] signUpForm() {
  		Scanner input = new Scanner(System.in);

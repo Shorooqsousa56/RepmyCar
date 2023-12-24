@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import p_1.MyApp;
+import p.MyApp;
 
 public class installation_test {
 
