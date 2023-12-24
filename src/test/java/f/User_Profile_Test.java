@@ -3,11 +3,11 @@ package f;
 
 
 import static org.junit.Assert.assertTrue;
-import static p.MyApp.theProductIsInterior;
+import static p_1.MyApp.theProductIsInterior;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import p.MyApp;
+import p_1.MyApp;
 
 public class User_Profile_Test {
 	

@@ -6,8 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import p.MyApp;
-import p.Product;
+import p_1.MyApp;
+import p_1.Product;
 
 public class AdminTest {
 
